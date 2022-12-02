@@ -1,0 +1,50 @@
+site_name: Arcan Documentation
+site_author: Arcan s.r.l., Italy
+site_description:
+copyright: "&copy; 2021-2022 Arcan | Arcan s.r.l., Italy. All rights reserved"
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/linkedin
+      name: LinkedIn
+      link: https://www.linkedin.com/company/arcan-tech
+    - icon: fontawesome/brands/twitter
+      name: Twitter
+      link: https://twitter.com/arcan_tech
+    - icon: fontawesome/brands/instagram
+      name: Instagram
+      link: https://instagram.com/arcan_tech
+    - icon: fontawesome/brands/github
+      name: GitHub
+      link: https://github.com/Arcan-Tech
+    - icon: fontawesome/solid/envelope
+      name: Email
+      link: mailto:info@arcan.tech
+theme:
+  name: material
+  language: en
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.ico
+  features:
+    - navigation.top
+  plugins:
+    - social
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: white
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode

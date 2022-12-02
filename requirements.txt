@@ -1,0 +1,4 @@
+mkdocs-material==8.*
+pillow==9.*
+cairosvg==2.*
+mike==1.*
