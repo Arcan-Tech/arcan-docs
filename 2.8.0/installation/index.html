@@ -518,17 +518,17 @@
 <li>VirtualBox</li>
 </ul>
 <h2 id="how-to-run-arcan-locally">How to run Arcan locally</h2>
-<p>First, clone or <a href="https://github.com/Arcan-Tech/arcan-trial/archive/refs/heads/main.zip">download</a> this repository (<code>/arcan-trial</code> folder). Then, follow the instructions below.</p>
+<p>First, <a href="https://github.com/Arcan-Tech/arcan-trial">Clone</a> or <a href="https://github.com/Arcan-Tech/arcan-trial/archive/refs/heads/main.zip">download</a> Arcan from Github. Then, follow the instructions below.</p>
 <h3 id="obtain-the-licence-file">Obtain the licence file</h3>
 <ul>
 <li>Fill in this <a href="https://www.arcan.tech/on-premise-trial/">form</a>. You will receive the license at the provided email address.</li>
 <li>Open the email and download the attached <code>ArcanLicence_YYYYMMDD</code> licence file.</li>
-<li>Copy the <code>ArcanLicence_YYYYMMDD</code> licence file to the <a href="./licences">licences</a> directory.</li>
+<li>Copy the <code>ArcanLicence_YYYYMMDD</code> licence file to the <a href="https://github.com/Arcan-Tech/arcan-trial/tree/main/licences">licences</a> directory.</li>
 </ul>
 <h3 id="configure-the-environment">Configure the environment</h3>
 <ul>
-<li>Copy the content of the <a href="./.env.example">.env.example</a> file into a new file named <code>.env</code>.</li>
-<li>Change the value of the variable <code>ARCAN_LICENCE_FILENAME</code> with the name of licence file you copied in the <a href="./licences">licences</a> directory.</li>
+<li>Copy the content of the <a href="https://github.com/Arcan-Tech/arcan-trial/blob/main/.env.example">.env.example</a> file into a new file named <code>.env</code>.</li>
+<li>Change the value of the variable <code>ARCAN_LICENCE_FILENAME</code> with the name of licence file you copied in the <a href="https://github.com/Arcan-Tech/arcan-trial/tree/main/licences">licences</a> directory.</li>
 </ul>
 <h3 id="run-arcan-with-native-docker-execution-mode">Run Arcan with native Docker execution mode</h3>
 <ul>
@@ -541,8 +541,8 @@
 <ul>
 <li>To run the Arcan dashboard and the server, open your favourite terminal and navigate to the <code>/arcan-trial</code> folder. Within the folder execute: <code>vagrant up</code>.</li>
 <li>You will find the dashboard at <a href="http://localhost:3000">http://localhost:3000</a>.</li>
-<li>To analyse a <em>remote</em> project, simply use the remote repo url when creating a new project. If the repo is private, remember to use a personal access token as password (see the <a href="./documentation">documentation</a> for more info).</li>
-<li>To analyse a <em>local</em> project, copy the project folder into <code>/arcan-trial/projects</code>. When creating a new project, specify the path to analyse as follows: <code>./projects/&lt;folder_name&gt;</code>  (see the <a href="./documentation">documentation</a> for more info).</li>
+<li>To analyse a <em>remote</em> project, use the remote repo URL when creating a new project. If the repository is private, remember to use a personal access token as password by ticking the "Project requires authentication" box (see <a href="../analyse_project/#analyse-a-remote-repository">How to analyse a remote repository</a> for more info).</li>
+<li>To analyse a <em>local</em> project, copy the project folder into <code>/arcan-trial/projects</code>. When creating a new project, specify the path to analyse as follows: <code>./projects/&lt;folder_name&gt;</code> (see <a href="../analyse_project/#analyse-a-local-repository">How to analyse a local repository</a> for more info).</li>
 </ul>
 <h4 id="optional">Optional</h4>
 <p>Should you need to update to the latest Arcan version:
