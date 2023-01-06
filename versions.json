@@ -1,1 +1,1 @@
-[{"version": "2.8.0", "title": "2.8.0", "aliases": ["latest"]}]
+[{"version": "2.8.0", "title": "2.8.0", "aliases": []}, {"version": "${VERSION}", "title": "${VERSION}", "aliases": ["latest"]}]
