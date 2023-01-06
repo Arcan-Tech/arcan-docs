@@ -6,11 +6,11 @@ Arcan helps you keep Technical Debt under control and avoid its shortcomings. Th
 and integrates into your CI pipeline to ensure that your code continuously meets high-quality standards.
 
 The analysis is available for the following programming languages:
-* Java
-* C
-* C++
-* C#
-* Python
+- Java
+- C
+- C++
+- C#
+- Python
 
 More languages are coming next!
 
@@ -19,6 +19,8 @@ More languages are coming next!
 The backbone of a software system is its [architecture](https://martinfowler.com/architecture/). Software architectures need to continuously update, adapt and change. Software maintenance and evolution become expensive, time-consuming, and sometimes impossible if architecture quality is not continuously assessed. 
 
 The accumulation of sub-optimal architectural solutions inside a software system results in the growth of *Architectural Technical Debt*, a segment of a bigger problem ([Technical Debt](https://martinfowler.com/bliki/TechnicalDebt.html)) that costs [500 billion dollars worldwide](https://stripe.com/files/reports/the-developer-coefficient.pdf). 
+
+> 33% of the time of a developer is *wasted* to manage technical debt.
 
 This problem manifests itself in specific contexts, for instance when there is the need to migrate an obsolete technology or when there is the need to fast scale up the number of features of a software application. However, the deepest sources causing this problem can hardly be detected by hand, and software developers lack the tools to detect them. 
 
@@ -33,15 +35,14 @@ Architectural Smells come in different types. [Here](https://github.com/Arcan-Te
 ## Getting started
 
 To download our 30-days trial, please visit [www.arcan.tech](https://www.arcan.tech/get-started/).
-
 You will need [docker](https://docs.docker.com/get-docker/) installed on your machine to run Arcan, but don't worry! You don’t need to know how Docker works to use Arcan.
 
-You can also have a quick look to the tool with the Arcan [online demo](https://demo.arcan.tech/).
+> You can also have a quick look to the tool with the Arcan [online demo](https://demo.arcan.tech/).
 
 ### Resources
-
-* [How to install](installation.md)
-* [How to run the first analysis](get_started.md)
+* [Quickstart](get_started.md)
+* [Arcan glossary](glossary.md)
+* [Guide to results inspection](inspect_project.md)
 
 ## Get a yearly license
 
