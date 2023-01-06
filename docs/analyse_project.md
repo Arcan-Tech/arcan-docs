@@ -1,8 +1,10 @@
 # Analyse a new project
 
-How to fill the "Analyse new project" form:
+To analyse a new project, run Arcan and click the ADD NEW button on the top-right corner. 
 
-- Name: the name of the project you want to analyse
+Fill the "Analyse new project" form in the following way:
+
+- Name: indicate the name of the project you want to analyse.
 - Language: select the programming language you want to analyse.
 - Type: Select "Local project" for projects residing in the same server where Arcan runs or "Remote" for projects residing in a remote repository (e.g., Github repository).
 
