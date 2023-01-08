@@ -57,29 +57,32 @@ Table description:
 
 Click on the pink button with the smell ID to open the graph representation of the Architectural Smell.
 
-Click either an edge or a node to show the source code. The code causing the smell and that should be refactored is highlighed in red.
-
 At the top-left of the page, you can find the controls of the graph.
 
-- Reload graph layout
-- Centre graph
-- Turn zoom on/off
+- (1) Reload graph layout
+- (2) Centre graph
+- (3) Turn zoom on/off
 
 At the top-right of the page, you can find additional controls for graph exploration.
 
-- Change the layout of the graph
-- Insert the name of a unit or container to quickly find it in the graph.
+- (4) Change the layout of the graph
+- (5) Insert the name of a unit or container to quickly find it in the graph.
 
+(6) Click either an edge or a node to show the source code. The code causing the smell and that should be refactored is highlighed in red.
+
+![The architectural smell graph page](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_smell_graph.jpg)
 
 ## Comprehension page
 
 ### Graph settings
 
-On this page, you can select the specific parts of code that you want to plot in the graph. Use SELECT ALL and UNSELECT ALL to select or unselect all the project's components quickly.
+(1) On this page, you can select the specific parts of code that you want to plot in the graph. (2) Use SELECT ALL and UNSELECT ALL to select or unselect all the project's components quickly.
 
-You can choose the types of components and dependencies to display on the right. 
+(3) You can choose the types of components and dependencies to display on the right. 
 
 Once the configuration is set up, click on the "Graph" tab to show the graph.
+
+![Graph settings](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_graph_settings.jpg)
 
 ### Graph
 
@@ -89,9 +92,22 @@ Use ctrl + left mouse click to select and drag portions of graph.
 
 At the top-left of the page, you can find the controls of the graph.
 
-- Reload graph layout
-- Centre graph
-- Turn zoom on/off
+- (1) Reload graph layout
+- (2) Centre graph
+- (3) Turn zoom on/off
+
+At the top-right of the page, you can find additional controls for graph exploration.
+
+- (4) Change the layout of the graph
+- (5) Insert the name of a unit or container to quickly find it in the graph.
+
+(6) Click a node to open the "Neighbour graph", that is a portion of the graph containing only the nodes next (depht=1) to the selected node.
+
+![The graph](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_graph.jpg)
+
+### Neighbour graph
+
+![The neighbour graph](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_neighbour_graph.jpg)
 
 ### Architectural views
 
@@ -103,6 +119,7 @@ Useful to investigate how the project’s containers are nested one inside the o
 - Graph settings
 - Graph layout: KLAY
 
+![View 1](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_1.jpg)
 
 **Project container dependencies**
 Useful to investigate the dependencies between different project’s containers.
@@ -110,15 +127,21 @@ Useful to investigate the dependencies between different project’s containers.
 - Graph settings
 - Graph layout: GRID
 
+![View 2](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_2.jpg)
+
 **Project unit hierarchies**
 Useful to investigate how the project’s containers are nested one inside the other.
 
 - Graph settings
 - Graph layout: KLAY
 
+![View 3](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_3.jpg)
+
 **Project unit usage**
 Useful to identify the most used units of the project.
 
 - Graph settings
 - Graph layout: CONCENTRIC
+
+![View 4](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_4.jpg)
 
