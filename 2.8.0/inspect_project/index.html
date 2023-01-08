@@ -364,6 +364,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#neighbour-graph" class="md-nav__link">
+    Neighbour graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#architectural-views" class="md-nav__link">
     Architectural views
   </a>
@@ -481,6 +488,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#neighbour-graph" class="md-nav__link">
+    Neighbour graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#architectural-views" class="md-nav__link">
     Architectural views
   </a>
@@ -554,32 +568,43 @@
 <p><img alt="The assessment page" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_assessment.jpg" /></p>
 <h3 id="architectural-smell-graph-page">Architectural smell graph page</h3>
 <p>Click on the pink button with the smell ID to open the graph representation of the Architectural Smell.</p>
-<p>Click either an edge or a node to show the source code. The code causing the smell and that should be refactored is highlighed in red.</p>
 <p>At the top-left of the page, you can find the controls of the graph.</p>
 <ul>
-<li>Reload graph layout</li>
-<li>Centre graph</li>
-<li>Turn zoom on/off</li>
+<li>(1) Reload graph layout</li>
+<li>(2) Centre graph</li>
+<li>(3) Turn zoom on/off</li>
 </ul>
 <p>At the top-right of the page, you can find additional controls for graph exploration.</p>
 <ul>
-<li>Change the layout of the graph</li>
-<li>Insert the name of a unit or container to quickly find it in the graph.</li>
+<li>(4) Change the layout of the graph</li>
+<li>(5) Insert the name of a unit or container to quickly find it in the graph.</li>
 </ul>
+<p>(6) Click either an edge or a node to show the source code. The code causing the smell and that should be refactored is highlighed in red.</p>
+<p><img alt="The architectural smell graph page" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_smell_graph.jpg" /></p>
 <h2 id="comprehension-page">Comprehension page</h2>
 <h3 id="graph-settings">Graph settings</h3>
-<p>On this page, you can select the specific parts of code that you want to plot in the graph. Use SELECT ALL and UNSELECT ALL to select or unselect all the project's components quickly.</p>
-<p>You can choose the types of components and dependencies to display on the right. </p>
+<p>(1) On this page, you can select the specific parts of code that you want to plot in the graph. (2) Use SELECT ALL and UNSELECT ALL to select or unselect all the project's components quickly.</p>
+<p>(3) You can choose the types of components and dependencies to display on the right. </p>
 <p>Once the configuration is set up, click on the "Graph" tab to show the graph.</p>
+<p><img alt="Graph settings" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_graph_settings.jpg" /></p>
 <h3 id="graph">Graph</h3>
 <p>This page offers a high-level representation of the software architecture of the project under analysis. Depending on the settings you choose, you can produce different <em>architectural views</em>.</p>
 <p>Use ctrl + left mouse click to select and drag portions of graph.</p>
 <p>At the top-left of the page, you can find the controls of the graph.</p>
 <ul>
-<li>Reload graph layout</li>
-<li>Centre graph</li>
-<li>Turn zoom on/off</li>
+<li>(1) Reload graph layout</li>
+<li>(2) Centre graph</li>
+<li>(3) Turn zoom on/off</li>
 </ul>
+<p>At the top-right of the page, you can find additional controls for graph exploration.</p>
+<ul>
+<li>(4) Change the layout of the graph</li>
+<li>(5) Insert the name of a unit or container to quickly find it in the graph.</li>
+</ul>
+<p>(6) Click a node to open the "Neighbour graph", that is a portion of the graph containing only the nodes next (depht=1) to the selected node.</p>
+<p><img alt="The graph" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_graph.jpg" /></p>
+<h3 id="neighbour-graph">Neighbour graph</h3>
+<p><img alt="The neighbour graph" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_neighbour_graph.jpg" /></p>
 <h3 id="architectural-views">Architectural views</h3>
 <p>We recommend the following settings instructions to generate a set of Architectural Views.</p>
 <p><strong>Project tree</strong>
@@ -588,24 +613,28 @@ Useful to investigate how the project’s containers are nested one inside the o
 <li>Graph settings</li>
 <li>Graph layout: KLAY</li>
 </ul>
+<p><img alt="View 1" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_1.jpg" /></p>
 <p><strong>Project container dependencies</strong>
 Useful to investigate the dependencies between different project’s containers.</p>
 <ul>
 <li>Graph settings</li>
 <li>Graph layout: GRID</li>
 </ul>
+<p><img alt="View 2" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_2.jpg" /></p>
 <p><strong>Project unit hierarchies</strong>
 Useful to investigate how the project’s containers are nested one inside the other.</p>
 <ul>
 <li>Graph settings</li>
 <li>Graph layout: KLAY</li>
 </ul>
+<p><img alt="View 3" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_3.jpg" /></p>
 <p><strong>Project unit usage</strong>
 Useful to identify the most used units of the project.</p>
 <ul>
 <li>Graph settings</li>
 <li>Graph layout: CONCENTRIC</li>
 </ul>
+<p><img alt="View 4" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_4.jpg" /></p>
 
 
 
