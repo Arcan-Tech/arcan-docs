@@ -114,33 +114,33 @@ At the top-right of the page, you can find additional controls for graph explora
 We recommend the following settings instructions to generate a set of Architectural Views.
 
 **Project tree**
+
 Useful to investigate how the project’s containers are nested one inside the other.
 
-- Graph settings
 - Graph layout: KLAY
 
 ![View 1](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_1.jpg)
 
 **Project container dependencies**
+
 Useful to investigate the dependencies between different project’s containers.
 
-- Graph settings
 - Graph layout: GRID
 
 ![View 2](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_2.jpg)
 
 **Project unit hierarchies**
+
 Useful to investigate how the project’s containers are nested one inside the other.
 
-- Graph settings
 - Graph layout: KLAY
 
 ![View 3](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_3.jpg)
 
 **Project unit usage**
+
 Useful to identify the most used units of the project.
 
-- Graph settings
 - Graph layout: CONCENTRIC
 
 ![View 4](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_4.jpg)
