@@ -6,11 +6,11 @@ Arcan helps you keep Technical Debt under control and avoid its shortcomings. Th
 and integrates into your CI pipeline to ensure that your code continuously meets high-quality standards.
 
 The analysis is available for the following programming languages:
-- Java
-- C
-- C++
-- C#
-- Python
+* Java
+* C
+* C++
+* C#
+* Python
 
 More languages are coming next!
 
@@ -25,6 +25,8 @@ The accumulation of sub-optimal architectural solutions inside a software system
 This problem manifests itself in specific contexts, for instance when there is the need to migrate an obsolete technology or when there is the need to fast scale up the number of features of a software application. However, the deepest sources causing this problem can hardly be detected by hand, and software developers lack the tools to detect them. 
 
 We offer a platform for automatic source code analysis that assesses the [quality](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010) of software architectures in a few minutes. Arcan indicates the exact pain points in the code so that developers can fix them and make the code easy to program. The most innovative facet of Arcan is the ability to extract strategic data regarding Architectural Technical Debt so that managers can make informed decisions about software production and optimization. 
+
+![The developer coefficent](https://www.arcan.tech/wp-content/uploads/2023/01/arcan-pitch-deck-ENG-investors_600.jpg)
 
 ### Architectural Smells
 
