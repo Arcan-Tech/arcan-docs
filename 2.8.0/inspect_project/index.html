@@ -244,6 +244,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../architectural_smells/" class="md-nav__link">
+        Architectural Smells and refactoring
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../get_started/" class="md-nav__link">
         Get Started
       </a>
@@ -405,6 +420,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refactoring/" class="md-nav__link">
+        Refactoring best practices
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -542,13 +572,13 @@
 <h2 id="overview-page">Overview page</h2>
 <p>This page offers an overview of the analysed project's overall quality and Technical Debt.</p>
 <ul>
-<li>(1) Technical Debt Dispersion</li>
-<li>(2) Technical Debt Spread</li>
-<li>(3) Technical Debt</li>
-<li>(4) Design Complexity</li>
-<li>(5) Rigidity</li>
-<li>(6) Technical Debt Evolution</li>
-<li>(7) List of analysed versions</li>
+<li>(1) Technical Debt Dispersion: When <em>high</em>, it means that Technical Debt affects multiple and sparse portions of the code. When <em>low</em>, it means that Technical Debt is concentrated in a specific part of the code. The latest scenario is desirable because it is easier to address and solve Technical Debt when delimited.</li>
+<li>(2) Technical Debt Spread: The percentage of code affected by Technical Debt.</li>
+<li>(3) Technical Debt: the number of man-hours needed to remove the detected architectural smells.</li>
+<li>(4) Design Complexity: the ratio between the number of architectural dependencies and the number of architectural components. When <em>high</em>, the code is tangled and very coupled, going against the <a href="https://cseweb.ucsd.edu//~wgg/CSE131B/Design/node1.html">modularity</a> and <a href="https://www.oreilly.com/library/view/software-architects-handbook/9781788624060/8ff905c2-217a-47f0-85c2-789296d42e8d.xhtml">separation of concerns</a> principle.</li>
+<li>(5) Rigidity: computed with the <a href="https://www.codeproject.com/Articles/1007524/Object-oriented-metrics-by-Robert-Martin"><em>Instability Metric</em></a> defined by Robert Martin. When <em>high</em>, the code is sensitive to change proneness (a single change causes multiple cascade changes, making maintenance difficult).</li>
+<li>(6) Technical Debt Evolution: the trend of Technical Debt along the code history. The plot appears if more than one project version is analysed.</li>
+<li>(7) List of analysed versions: The list of analysed versions. If the analysed repository is a Git repository, the list reports the version (commit) hash.</li>
 </ul>
 <p><img alt="The overview page" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_overview.jpg" /></p>
 <h2 id="assessment-page">Assessment page</h2>
@@ -556,13 +586,13 @@
 <p>Each row contains the data of a single instance of Architectural Smell.</p>
 <p>Click on the name of a column to sort by it.</p>
 <p>Table description:
-- (1) ID
-- (2) Smell Type
-- (3) Tech debt index
-- (4) Severity
-- (5) Affected type
-- (6) Affected Elements
-- (7) Size</p>
+- (1) ID: the unique identifier of the Architectural Smell.
+- (2) Smell Type: the type of Architectural Smells. At the moment, Arcan detects four smells: "Cyclic Dependency", "God Component", "Hub-Like Dependency", and "Unstable Dependency".
+- (3) Tech debt index: the amount of Technical Debt caused by the single Architectural Smell. The sum of the Technical Debt of each smell corresponds to the Technical Debt index reported in the <a href="./#project-card">project card</a>.
+- (4) Severity: indicates how much the Architectural Smell is critical for the project. It is based on the smell's characteristics (such as size and shape) and it is computed thanks to a proprietary machine learning model trained on manually-classified examples.
+- (5) Affected type: indicates the type of the affected component (e.g., for Java, class or package).
+- (6) Affected Elements: the architectural components affected by the Architectural Smell.
+- (7) Size: the number of Architectural Components affected by the Architectural Smell.</p>
 <p>(8) To manipulate the table (e.g., filter results) and download the table data, use the commands on the top-right of the table.
 (9) Click the arrow on the left to expand the row. Here you can find information about the detection rule applied and the values of the parameters that triggered the smell detection.</p>
 <p><img alt="The assessment page" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_assessment.jpg" /></p>
@@ -657,7 +687,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2021-2022 Arcan | Arcan s.r.l., Italy. All rights reserved
+      &copy; 2021-2023 Arcan | Arcan s.r.l., Italy. All rights reserved
     </div>
   
   

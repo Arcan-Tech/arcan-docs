@@ -11,17 +11,15 @@
       
       
       
-        <link rel="prev" href="../inspect_project/">
+        <link rel="prev" href="../installation/">
       
-      
-        <link rel="next" href="../refactoring/">
       
       <link rel="icon" href="../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
-        <title>Install Arcan - Arcan Documentation</title>
+        <title>Refactoring best practices - Arcan Documentation</title>
       
     
     
@@ -73,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install-arcan" class="md-skip">
+        <a href="#refactoring-best-practices" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Install Arcan
+              Refactoring best practices
             
           </span>
         </div>
@@ -302,6 +300,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Install Arcan
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -314,12 +327,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Install Arcan
+          Refactoring best practices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Install Arcan
+        Refactoring best practices
       </a>
       
         
@@ -338,65 +351,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements-for-native-docker-execution-mode" class="md-nav__link">
-    Requirements for native Docker execution mode
+  <a href="#cyclic-dependency" class="md-nav__link">
+    Cyclic Dependency
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requirements-for-vm-based-docker-execution-mode-using-vagrant" class="md-nav__link">
-    Requirements for VM-based Docker execution mode using Vagrant
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-run-arcan-locally" class="md-nav__link">
-    How to run Arcan locally
-  </a>
-  
-    <nav class="md-nav" aria-label="How to run Arcan locally">
+    <nav class="md-nav" aria-label="Cyclic Dependency">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#obtain-the-licence-file" class="md-nav__link">
-    Obtain the licence file
+  <a href="#refactoring-of-cyclic-dependencies-affecting-units" class="md-nav__link">
+    Refactoring of Cyclic Dependencies affecting UNITS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-the-environment" class="md-nav__link">
-    Configure the environment
+  <a href="#refactoring-of-cyclic-dependencies-affecting-containers" class="md-nav__link">
+    Refactoring of Cyclic Dependencies affecting CONTAINERS
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-arcan-with-native-docker-execution-mode" class="md-nav__link">
-    Run Arcan with native Docker execution mode
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-arcan-with-vm-based-docker-execution-mode-using-vagrant" class="md-nav__link">
-    Run Arcan with VM-based Docker execution mode using Vagrant
-  </a>
-  
-    <nav class="md-nav" aria-label="Run Arcan with VM-based Docker execution mode using Vagrant">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional" class="md-nav__link">
-    Optional
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -409,21 +381,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../refactoring/" class="md-nav__link">
-        Refactoring best practices
-      </a>
     </li>
   
 
@@ -455,65 +412,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements-for-native-docker-execution-mode" class="md-nav__link">
-    Requirements for native Docker execution mode
+  <a href="#cyclic-dependency" class="md-nav__link">
+    Cyclic Dependency
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requirements-for-vm-based-docker-execution-mode-using-vagrant" class="md-nav__link">
-    Requirements for VM-based Docker execution mode using Vagrant
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-run-arcan-locally" class="md-nav__link">
-    How to run Arcan locally
-  </a>
-  
-    <nav class="md-nav" aria-label="How to run Arcan locally">
+    <nav class="md-nav" aria-label="Cyclic Dependency">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#obtain-the-licence-file" class="md-nav__link">
-    Obtain the licence file
+  <a href="#refactoring-of-cyclic-dependencies-affecting-units" class="md-nav__link">
+    Refactoring of Cyclic Dependencies affecting UNITS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-the-environment" class="md-nav__link">
-    Configure the environment
+  <a href="#refactoring-of-cyclic-dependencies-affecting-containers" class="md-nav__link">
+    Refactoring of Cyclic Dependencies affecting CONTAINERS
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-arcan-with-native-docker-execution-mode" class="md-nav__link">
-    Run Arcan with native Docker execution mode
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-arcan-with-vm-based-docker-execution-mode-using-vagrant" class="md-nav__link">
-    Run Arcan with VM-based Docker execution mode using Vagrant
-  </a>
-  
-    <nav class="md-nav" aria-label="Run Arcan with VM-based Docker execution mode using Vagrant">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional" class="md-nav__link">
-    Optional
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -538,48 +454,26 @@
 
 
 
-<h1 id="install-arcan">Install Arcan</h1>
-<h2 id="requirements-for-native-docker-execution-mode">Requirements for native Docker execution mode</h2>
+<h1 id="refactoring-best-practices">Refactoring best practices</h1>
+<h2 id="cyclic-dependency">Cyclic Dependency</h2>
+<p>The main goal when refactoring a cycle is to break one or more dependencies. </p>
+<h3 id="refactoring-of-cyclic-dependencies-affecting-units">Refactoring of Cyclic Dependencies affecting UNITS</h3>
+<p>To better exemplify the techniques, we will consider a cycle made of two units, A and B. The techniques can be applied to break larger cycles by iterating the refactoring steps.</p>
+<!-- ![View 1](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_1.jpg) -->
+
+<p>Depending on the characteristics of the dependency to break, different refactoring techniques can be adopted:</p>
 <ul>
-<li>Docker Engine &gt;= 20.10 (See <a href="https://docs.docker.com/engine/install">https://docs.docker.com/engine/install</a>)</li>
-<li>Docker Compose (See <a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a>)</li>
+<li><strong>Move function</strong>: move one or more functions (e.g., Java method) into the target unit. This technique is feasible when the function is not invoked within the unit itself and the only problem is that the function is misplaced.</li>
+<li><strong>Extract unit</strong>: create a new unit and place all the code responsible for the cyclic dependency in it. </li>
+<li><strong>Create interface</strong>: Introduce an interface for one of the abstractions involved in the cycle. The new interface contains all methods that A calls on B. A only knows the interface that is implemented by B. Mind that this technique can be used if A only uses B and does not generate instances of B.</li>
+<li><strong>Merge units</strong>: if the units involved in the cycle represent a semantically single object, merge the units into a single unit.</li>
 </ul>
-<h2 id="requirements-for-vm-based-docker-execution-mode-using-vagrant">Requirements for VM-based Docker execution mode using <a href="https://developer.hashicorp.com/vagrant">Vagrant</a></h2>
-<ul>
-<li>Vagrant</li>
-<li>VirtualBox</li>
-</ul>
-<h2 id="how-to-run-arcan-locally">How to run Arcan locally</h2>
-<p>First, <a href="https://github.com/Arcan-Tech/arcan-trial">Clone</a> or <a href="https://github.com/Arcan-Tech/arcan-trial/archive/refs/heads/main.zip">download</a> Arcan from Github. Then, follow the instructions below.</p>
-<h3 id="obtain-the-licence-file">Obtain the licence file</h3>
-<ul>
-<li>Fill in this <a href="https://www.arcan.tech/on-premise-trial/">form</a>. You will receive the license at the provided email address.</li>
-<li>Open the email and download the attached <code>ArcanLicence_YYYYMMDD</code> licence file.</li>
-<li>Copy the <code>ArcanLicence_YYYYMMDD</code> licence file to the <a href="https://github.com/Arcan-Tech/arcan-trial/tree/main/licences">licences</a> directory.</li>
-</ul>
-<h3 id="configure-the-environment">Configure the environment</h3>
-<ul>
-<li>Copy the content of the <a href="https://github.com/Arcan-Tech/arcan-trial/blob/main/.env.example">.env.example</a> file into a new file named <code>.env</code>.</li>
-<li>Change the value of the variable <code>ARCAN_LICENCE_FILENAME</code> with the name of licence file you copied in the <a href="https://github.com/Arcan-Tech/arcan-trial/tree/main/licences">licences</a> directory.</li>
-</ul>
-<h3 id="run-arcan-with-native-docker-execution-mode">Run Arcan with native Docker execution mode</h3>
-<ul>
-<li>To run the Arcan dashboard and the server, open your favourite terminal and navigate to the <code>/arcan-trial</code> folder. Within the folder execute: <code>docker compose up</code>.</li>
-<li>You will find the dashboard at <a href="http://localhost:3000">http://localhost:3000</a>.</li>
-<li>To analyse a <em>remote</em> project, simply use the remote repo url when creating a new project. If the repo is private, remember to use a personal access token as password (see the <a href="./documentation">documentation</a> for more info).</li>
-<li>To analyse a <em>local</em> project, copy the project folder into <code>/arcan-trial/projects</code>. When creating a new project, specify the path to analyse as follows: <code>./projects/&lt;folder_name&gt;</code>  (see the <a href="./documentation">documentation</a> for more info).</li>
-</ul>
-<h3 id="run-arcan-with-vm-based-docker-execution-mode-using-vagrant">Run Arcan with VM-based Docker execution mode using <a href="https://developer.hashicorp.com/vagrant">Vagrant</a></h3>
-<ul>
-<li>To run the Arcan dashboard and the server, open your favourite terminal and navigate to the <code>/arcan-trial</code> folder. Within the folder execute: <code>vagrant up</code>.</li>
-<li>You will find the dashboard at <a href="http://localhost:3000">http://localhost:3000</a>.</li>
-<li>To analyse a <em>remote</em> project, use the remote repo URL when creating a new project. If the repository is private, remember to use a personal access token as password by ticking the "Project requires authentication" box (see <a href="../analyse_project/#analyse-a-remote-repository">How to analyse a remote repository</a> for more info).</li>
-<li>To analyse a <em>local</em> project, copy the project folder into <code>/arcan-trial/projects</code>. When creating a new project, specify the path to analyse as follows: <code>./projects/&lt;folder_name&gt;</code> (see <a href="../analyse_project/#analyse-a-local-repository">How to analyse a local repository</a> for more info).</li>
-</ul>
-<h4 id="optional">Optional</h4>
-<p>Should you need to update to the latest Arcan version:
-- Open the <code>.env</code> file. Change the value of the variable <code>ARCAN_DASHBOARD_VERSION</code> with the latest Arcan dashboard version tag. You can find the latest version <a href="https://github.com/Arcan-Tech/arcan-2/pkgs/container/arcan-dashboard-trial">here</a>.
-- Change the value of the variable <code>ARCAN_SERVER_VERSION</code> with the latest Arcan server version tag. You can find the latest version <a href="https://github.com/Arcan-Tech/arcan-2/pkgs/container/arcan-server-trial">here</a>.</p>
+<h3 id="refactoring-of-cyclic-dependencies-affecting-containers">Refactoring of Cyclic Dependencies affecting CONTAINERS</h3>
+<p>In the case of Cyclic Dependencies affecting containers (e.g., Java packages), you can face two possibilities:
+- The cycle is caused by a cycle among units. In such a case, you can apply the same techniques for breaking cycles among units.
+- The cycle only exists among packages. In such a case, it is likely that there is a misplaced unit of function. You must move one of the pieces of code generating the dependency.
+    - Apply move unit from one container to another in the case an entire unit or units are misplaced.
+    - Apply move function from one unit to another in the case one or more functions are misplaced.</p>
 
 
 
