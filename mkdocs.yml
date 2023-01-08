@@ -1,7 +1,7 @@
 site_name: Arcan Documentation
 site_author: Arcan s.r.l., Italy
 site_description:
-copyright: "&copy; 2021-2022 Arcan | Arcan s.r.l., Italy. All rights reserved"
+copyright: "&copy; 2021-2023 Arcan | Arcan s.r.l., Italy. All rights reserved"
 extra:
   version:
     provider: mike

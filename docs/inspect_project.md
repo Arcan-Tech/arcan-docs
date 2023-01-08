@@ -21,13 +21,13 @@ Click on "INSPECT" or on the project's name to inspect the analysis results in d
 
 This page offers an overview of the analysed project's overall quality and Technical Debt.
 
-- (1) Technical Debt Dispersion
-- (2) Technical Debt Spread
-- (3) Technical Debt
-- (4) Design Complexity
-- (5) Rigidity
-- (6) Technical Debt Evolution
-- (7) List of analysed versions
+- (1) Technical Debt Dispersion: When *high*, it means that Technical Debt affects multiple and sparse portions of the code. When *low*, it means that Technical Debt is concentrated in a specific part of the code. The latest scenario is desirable because it is easier to address and solve Technical Debt when delimited.
+- (2) Technical Debt Spread: The percentage of code affected by Technical Debt.
+- (3) Technical Debt: the number of man-hours needed to remove the detected architectural smells.
+- (4) Design Complexity: the ratio between the number of architectural dependencies and the number of architectural components. When *high*, the code is tangled and very coupled, going against the [modularity](https://cseweb.ucsd.edu//~wgg/CSE131B/Design/node1.html) and [separation of concerns](https://www.oreilly.com/library/view/software-architects-handbook/9781788624060/8ff905c2-217a-47f0-85c2-789296d42e8d.xhtml) principle.
+- (5) Rigidity: computed with the [*Instability Metric*](https://www.codeproject.com/Articles/1007524/Object-oriented-metrics-by-Robert-Martin) defined by Robert Martin. When *high*, the code is sensitive to change proneness (a single change causes multiple cascade changes, making maintenance difficult).
+- (6) Technical Debt Evolution: the trend of Technical Debt along the code history. The plot appears if more than one project version is analysed.
+- (7) List of analysed versions: The list of analysed versions. If the analysed repository is a Git repository, the list reports the version (commit) hash.
 
 ![The overview page](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_overview.jpg)
 
@@ -40,13 +40,13 @@ Each row contains the data of a single instance of Architectural Smell.
 Click on the name of a column to sort by it.
 
 Table description:
-- (1) ID
-- (2) Smell Type
-- (3) Tech debt index
-- (4) Severity
-- (5) Affected type
-- (6) Affected Elements
-- (7) Size
+- (1) ID: the unique identifier of the Architectural Smell.
+- (2) Smell Type: the type of Architectural Smells. At the moment, Arcan detects four smells: "Cyclic Dependency", "God Component", "Hub-Like Dependency", and "Unstable Dependency".
+- (3) Tech debt index: the amount of Technical Debt caused by the single Architectural Smell. The sum of the Technical Debt of each smell corresponds to the Technical Debt index reported in the [project card](inspect_project.md#project-card).
+- (4) Severity: indicates how much the Architectural Smell is critical for the project. It is based on the smell's characteristics (such as size and shape) and it is computed thanks to a proprietary machine learning model trained on manually-classified examples.
+- (5) Affected type: indicates the type of the affected component (e.g., for Java, class or package).
+- (6) Affected Elements: the architectural components affected by the Architectural Smell.
+- (7) Size: the number of Architectural Components affected by the Architectural Smell.
 
 (8) To manipulate the table (e.g., filter results) and download the table data, use the commands on the top-right of the table.
 (9) Click the arrow on the left to expand the row. Here you can find information about the detection rule applied and the values of the parameters that triggered the smell detection.
