@@ -6,6 +6,7 @@ Arcan helps you keep Technical Debt under control and avoid its shortcomings. Th
 and integrates into your CI pipeline to ensure that your code continuously meets high-quality standards.
 
 The analysis is available for the following programming languages:
+
 * Java
 * C
 * C++
