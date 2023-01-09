@@ -360,14 +360,14 @@
         
           <li class="md-nav__item">
   <a href="#refactoring-of-cyclic-dependencies-affecting-units" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting UNITS
+    Refactoring of Cyclic Dependencies affecting units
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#refactoring-of-cyclic-dependencies-affecting-containers" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting CONTAINERS
+    Refactoring of Cyclic Dependencies affecting containers
   </a>
   
 </li>
@@ -387,14 +387,14 @@
         
           <li class="md-nav__item">
   <a href="#refactoring-of-cyclic-dependencies-affecting-containers_1" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting CONTAINERS
+    Refactoring of Cyclic Dependencies affecting containers
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#refactoring-of-cyclic-dependencies-affecting-units_1" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting UNITS
+    Refactoring of Cyclic Dependencies affecting units
   </a>
   
 </li>
@@ -455,14 +455,14 @@
         
           <li class="md-nav__item">
   <a href="#refactoring-of-cyclic-dependencies-affecting-units" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting UNITS
+    Refactoring of Cyclic Dependencies affecting units
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#refactoring-of-cyclic-dependencies-affecting-containers" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting CONTAINERS
+    Refactoring of Cyclic Dependencies affecting containers
   </a>
   
 </li>
@@ -482,14 +482,14 @@
         
           <li class="md-nav__item">
   <a href="#refactoring-of-cyclic-dependencies-affecting-containers_1" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting CONTAINERS
+    Refactoring of Cyclic Dependencies affecting containers
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#refactoring-of-cyclic-dependencies-affecting-units_1" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting UNITS
+    Refactoring of Cyclic Dependencies affecting units
   </a>
   
 </li>
@@ -525,7 +525,7 @@
 <h1 id="refactoring-best-practices">Refactoring best practices</h1>
 <h2 id="cyclic-dependency">Cyclic Dependency</h2>
 <p>The main goal when refactoring a cycle is to break one or more dependencies. </p>
-<h3 id="refactoring-of-cyclic-dependencies-affecting-units">Refactoring of Cyclic Dependencies affecting UNITS</h3>
+<h3 id="refactoring-of-cyclic-dependencies-affecting-units">Refactoring of Cyclic Dependencies affecting units</h3>
 <p>To better exemplify the techniques, we will consider a cycle made of two units, A and B. The techniques can be applied to break larger cycles by iterating the refactoring steps.</p>
 <figure>
 <p><img alt="CD_1" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_cycle_1.jpg" />
@@ -553,7 +553,7 @@
 <ul>
 <li><strong>Merge units</strong>: if the units involved in the cycle represent a semantically single object, merge the units into a single unit.</li>
 </ul>
-<h3 id="refactoring-of-cyclic-dependencies-affecting-containers">Refactoring of Cyclic Dependencies affecting CONTAINERS</h3>
+<h3 id="refactoring-of-cyclic-dependencies-affecting-containers">Refactoring of Cyclic Dependencies affecting containers</h3>
 <p>In the case of Cyclic Dependencies affecting containers (e.g., Java packages), you can face two possibilities:
 - The cycle is caused by a cycle among units. In such a case, you can apply the same techniques for breaking cycles among units.
 - The cycle only exists among packages. In such a case, it is likely that there is a misplaced unit of function. You must move one of the pieces of code generating the dependency. You can follow two ways: a) Apply move unit from one container to another in the case an entire unit or units are misplaced; b) Apply move function from one unit to another in the case one or more functions are misplaced.</p>
@@ -563,28 +563,34 @@
 <figcaption>Figure 4_a: example of container cycle caused by a cycle among units - Figure 4_b: example of container cycle caused by misplaced code</figcaption>
 </figure>
 <h2 id="god-component">God Component</h2>
-<h3 id="refactoring-of-cyclic-dependencies-affecting-containers_1">Refactoring of Cyclic Dependencies affecting CONTAINERS</h3>
+<h3 id="refactoring-of-cyclic-dependencies-affecting-containers_1">Refactoring of Cyclic Dependencies affecting containers</h3>
 <p>The refactoring of God Components affecting containers can be carried out by splitting the content of the container into additional containers. First, you must inspect their dependencies to identify sets of cohesive units to separate. Privilege units that: </p>
 <ul>
 <li>share dependencies with a high “weight” value. This means they are strongly coupled. You can find the weight metric on Arcan.  </li>
 <li>are involved in Cyclic Dependencies. </li>
 </ul>
 <p>Once you identify sets of cohesive units, move them into newly created containers. Mind that you could unintentionally add Cyclic Dependencies among containers while moving.</p>
-<h3 id="refactoring-of-cyclic-dependencies-affecting-units_1">Refactoring of Cyclic Dependencies affecting UNITS</h3>
+<h3 id="refactoring-of-cyclic-dependencies-affecting-units_1">Refactoring of Cyclic Dependencies affecting units</h3>
 <p>The presence of a God component affecting containers likely implies the presence of a God Component affecting units too.
-In such a case, the main aim when refactoring a God component affecting units is to split it up. To do so, you can apply different techniques:
-- Extract function: often, units affected by God Components contain duplicated code. You must identify the duplicated code and extract a function in this case. Then, use the function in each part of the code where the code was duplicated.
-- Extract unit: if the affected unit implements different behaviors simultaneously, parts of the unit can be extracted and put into a new, separated unit. </p>
+In such a case, the main aim when refactoring a God component affecting units is to split it up. To do so, you can apply different techniques:</p>
+<ul>
+<li>Extract function: often, units affected by God Components contain duplicated code. You must identify the duplicated code and extract a function in this case. Then, use the function in each part of the code where the code was duplicated.</li>
+<li>Extract unit: if the affected unit implements different behaviors simultaneously, parts of the unit can be extracted and put into a new, separated unit. </li>
+</ul>
 <h2 id="hub-like-dependency">Hub-Like Dependency</h2>
 <p>Removing a hub means reassigning the responsibilities and roles of some classes in order to redesign their dependencies. It would ideal to split up the responsibilities of the hub across both new and already existing abstractions, so that the number of dependencies is reduced.</p>
-<p>To remove Hub-Like Dependency, the following refactoring techniques can come in handy:
-- Extract method: Create a new method with a similar body in another class. Either turn the old method into a simple delegation or remove it altogether.
-- Extract abstract unit: Create an abstract unit and move the common features to the abstract unit.
-- Extract unit: Create a new unit and move the relevant fields and functions from the old unit into the new unit.</p>
-<p>When Arcan detects that a unit is affected by a Hub-Like Dependency, to remove it, you can apply the following steps:
-1. Identify the centre of the hub, that is the component having a large number of incoming and outgoing dependencies. You can find this information on Arcan.
-2. Work on the centre using the refactoring techniques mentioned above.
-3. Consider the following: a) If you are working on a unit, try identify at least two different roles/responsibilities, then, for each one of them, create a new unit by applying "Extract unit". Additionally, you can also extract common functions/fields into a new superclass using "Extract Superclass". b) If you are working on a funciton, watch the incoming and the outgoing dependencies used and try to create a cohesive set of responsibilities for the function. Split the function into several different functions, each one with a different responsibility.</p>
+<p>To remove Hub-Like Dependency, the following refactoring techniques can come in handy:</p>
+<ul>
+<li>Extract method: Create a new method with a similar body in another class. Either turn the old method into a simple delegation or remove it altogether.</li>
+<li>Extract abstract unit: Create an abstract unit and move the common features to the abstract unit.</li>
+<li>Extract unit: Create a new unit and move the relevant fields and functions from the old unit into the new unit.</li>
+</ul>
+<p>When Arcan detects that a unit is affected by a Hub-Like Dependency, to remove it, you can apply the following steps:</p>
+<ol>
+<li>Identify the centre of the hub, that is the component having a large number of incoming and outgoing dependencies. You can find this information on Arcan.</li>
+<li>Work on the centre using the refactoring techniques mentioned above.</li>
+<li>Consider the following: a) If you are working on a unit, try identify at least two different roles/responsibilities, then, for each one of them, create a new unit by applying "Extract unit". Additionally, you can also extract common functions/fields into a new superclass using "Extract Superclass". b) If you are working on a funciton, watch the incoming and the outgoing dependencies used and try to create a cohesive set of responsibilities for the function. Split the function into several different functions, each one with a different responsibility.</li>
+</ol>
 <p>To remove the hub, you may also need to move the function into a different unit (you may consider creating a new unit, don not force cohesion) and thus the coupling should decrease.</p>
 <p><strong>Refactoring best practices for Unstable Dependency smell are coming soon.</strong></p>
 
