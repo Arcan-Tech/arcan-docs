@@ -6,12 +6,18 @@ The main goal when refactoring a cycle is to break one or more dependencies.
 ### Refactoring of Cyclic Dependencies affecting UNITS
 To better exemplify the techniques, we will consider a cycle made of two units, A and B. The techniques can be applied to break larger cycles by iterating the refactoring steps.
 
-<!-- ![View 1](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_view_1.jpg) -->
+<figure markdown>
+![CD_1](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_cycle_1.jpg)
+  <figcaption>Image caption</figcaption>
+</figure>
 
 Depending on the characteristics of the dependency to break, different refactoring techniques can be adopted:
 
 - **Move function**: move one or more functions (e.g., Java method) into the target unit. This technique is feasible when the function is not invoked within the unit itself and the only problem is that the function is misplaced.
 - **Extract unit**: create a new unit and place all the code responsible for the cyclic dependency in it. 
+
+![CD_1](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_cycle_1.jpg)
+
 - **Create interface**: Introduce an interface for one of the abstractions involved in the cycle. The new interface contains all methods that A calls on B. A only knows the interface that is implemented by B. Mind that this technique can be used if A only uses B and does not generate instances of B.
 - **Merge units**: if the units involved in the cycle represent a semantically single object, merge the units into a single unit.
 
