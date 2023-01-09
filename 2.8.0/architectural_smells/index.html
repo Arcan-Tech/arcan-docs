@@ -21,7 +21,7 @@
     
     
       
-        <title>Architectural Smells and refactoring - Arcan Documentation</title>
+        <title>Architectural Smells - Arcan Documentation</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architectural-smells-and-refactoring" class="md-skip">
+        <a href="#architectural-smells" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architectural Smells and refactoring
+              Architectural Smells
             
           </span>
         </div>
@@ -254,12 +254,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Architectural Smells and refactoring
+          Architectural Smells
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Architectural Smells and refactoring
+        Architectural Smells
       </a>
       
         
@@ -282,12 +282,38 @@
     Cyclic Dependency
   </a>
   
+    <nav class="md-nav" aria-label="Cyclic Dependency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawbacks" class="md-nav__link">
+    Drawbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#god-component" class="md-nav__link">
     God Component
   </a>
+  
+    <nav class="md-nav" aria-label="God Component">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawbacks_1" class="md-nav__link">
+    Drawbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -296,12 +322,38 @@
     Hub-Like Dependency
   </a>
   
+    <nav class="md-nav" aria-label="Hub-Like Dependency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawbacks_2" class="md-nav__link">
+    Drawbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#unstable-dependency" class="md-nav__link">
     Unstable Dependency
   </a>
+  
+    <nav class="md-nav" aria-label="Unstable Dependency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawbacks_3" class="md-nav__link">
+    Drawbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -419,12 +471,38 @@
     Cyclic Dependency
   </a>
   
+    <nav class="md-nav" aria-label="Cyclic Dependency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawbacks" class="md-nav__link">
+    Drawbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#god-component" class="md-nav__link">
     God Component
   </a>
+  
+    <nav class="md-nav" aria-label="God Component">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawbacks_1" class="md-nav__link">
+    Drawbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -433,12 +511,38 @@
     Hub-Like Dependency
   </a>
   
+    <nav class="md-nav" aria-label="Hub-Like Dependency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawbacks_2" class="md-nav__link">
+    Drawbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#unstable-dependency" class="md-nav__link">
     Unstable Dependency
   </a>
+  
+    <nav class="md-nav" aria-label="Unstable Dependency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawbacks_3" class="md-nav__link">
+    Drawbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -458,24 +562,57 @@
 
 
 
-<h1 id="architectural-smells-and-refactoring">Architectural Smells and refactoring</h1>
+<h1 id="architectural-smells">Architectural Smells</h1>
 <p>Arcan bases the estimate of Technical Debt on the detection of Architectural Smells, software design decisions that negatively impact the software quality. Smells violates design principles.</p>
-<p>At the moment, Arcan detects four types of Architectural Smells:
-- Cyclic Dependency
-- God Component
-- Hub-Like Dependency
-- Unstable Dependency</p>
+<p>At the moment, Arcan detects four types of Architectural Smells:</p>
+<ul>
+<li>Cyclic Dependency</li>
+<li>God Component</li>
+<li>Hub-Like Dependency</li>
+<li>Unstable Dependency</li>
+</ul>
 <h2 id="cyclic-dependency">Cyclic Dependency</h2>
-<p>When two or more architectural components are involved in a chain of relationships. The parts of code affected by CD are hard to release, to maintain and to reuse in isolation.</p>
+<p>When two or more architectural components are involved in a chain of relationships. </p>
+<h3 id="drawbacks">Drawbacks</h3>
+<p>The architectural components involved in a Cyclic Dependency are:</p>
+<ul>
+<li>hard to release</li>
+<li>hard to maintain</li>
+<li>hard to reuse in isolation</li>
+</ul>
+<p>The smell violates the <a href="https://devlead.io/DevTips/AcyclicDependenciesPrinciple">Acyclic Dependencies Principle</a> defined by <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>.</p>
 <p><img alt="CD" src="https://www.arcan.tech/wp-content/uploads/2023/01/cycle_1.jpg" /></p>
 <h2 id="god-component">God Component</h2>
-<p>this smell occurs when an architectural component is excessively large in terms of LOC (Lines Of Code). God components centralize logic and are a sign of low cohesion within the affected component, increasing complexity. </p>
+<p>this smell occurs when an architectural component is excessively large in terms of LOC (Lines Of Code). </p>
+<h3 id="drawbacks_1">Drawbacks</h3>
+<p>The architectural component affected by God Component:</p>
+<ul>
+<li>centralizes logic</li>
+<li>has low cohesion within</li>
+<li>has increasing complexity</li>
+</ul>
+<p>The smell violates the <a href="http://www.cs.sjsu.edu/~pearce/modules/lectures/ood/principles/Modularity.htm">Modularity Principle</a> defined by <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>.</p>
 <p><img alt="GC" src="https://www.arcan.tech/wp-content/uploads/2023/01/god.jpg" /></p>
 <h2 id="hub-like-dependency">Hub-Like Dependency</h2>
-<p>When an architectural component has (outgoing and ingoing) dependencies with a large number of other components. The component affected by HL centralizes logic, is a unique point of failure and favors change ripple effects. </p>
+<p>When an architectural component has (outgoing and ingoing) dependencies with a large number of other components. The component affected by HL ,  and . </p>
+<h3 id="drawbacks_2">Drawbacks</h3>
+<p>The component affected by the smell:</p>
+<ul>
+<li>centralizes logic</li>
+<li>is a unique point of failure</li>
+<li>favors change ripple effects</li>
+</ul>
+<p>The smell violates the <a href="http://www.cs.sjsu.edu/~pearce/modules/lectures/ood/principles/Modularity.htm">Modularity Principle</a> defined by <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>.</p>
 <p><img alt="HL" src="https://www.arcan.tech/wp-content/uploads/2023/01/hub.jpg" /></p>
 <h2 id="unstable-dependency">Unstable Dependency</h2>
-<p>describes an architectural component that depends on other components that are less stable than itself. This can cause a ripple effect of changes in the system. Instability (proneness to change) is measured using R.C. Martin’s formula</p>
+<p>describes an architectural component that depends on other components that are less stable than itself. Instability (proneness to change) is measured using <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>’s formula.</p>
+<h3 id="drawbacks_3">Drawbacks</h3>
+<p>The component affected by the smell can:</p>
+<ul>
+<li>favors change ripple effects</li>
+<li>be subjected to frequent changes</li>
+</ul>
+<p>The smell violates the <a href="https://devlead.io/DevTips/StableDependenciesPrinciple">Stable Dependency Principle</a> defined by <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>.</p>
 <p><img alt="UD" src="https://www.arcan.tech/wp-content/uploads/2023/01/unstable.jpg" /></p>
 
 
