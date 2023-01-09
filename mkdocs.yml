@@ -51,3 +51,14 @@ theme:
 markdown_extensions:
   - md_in_html
   - pymdownx.superfences
+nav:
+    - Welcome: 'index.md'
+    - Getting started: 'get_started.md'
+    - 'User guide':
+        - 'Install Arcan': 'installation.md'
+        - 'Analyse a new project': 'analyse_project.md'
+        - 'Inspect a project': 'inspect_project.md'
+    - 'Knowledge base':
+        - 'Glossary': 'license.md'
+        - 'Architectural smells': 'architectural_smells.md'
+        - 'Refactoring best pratices': 'refactoring.md'
