@@ -487,10 +487,10 @@
 </ul>
 <h3 id="refactoring-of-cyclic-dependencies-affecting-containers">Refactoring of Cyclic Dependencies affecting CONTAINERS</h3>
 <p>In the case of Cyclic Dependencies affecting containers (e.g., Java packages), you can face two possibilities:
-- The cycle is caused by a cycle among units. In such a case, you can apply the same techniques for breaking cycles among units.
-- The cycle only exists among packages. In such a case, it is likely that there is a misplaced unit of function. You must move one of the pieces of code generating the dependency.
-    - Apply move unit from one container to another in the case an entire unit or units are misplaced.
-    - Apply move function from one unit to another in the case one or more functions are misplaced.</p>
+* The cycle is caused by a cycle among units. In such a case, you can apply the same techniques for breaking cycles among units.
+* The cycle only exists among packages. In such a case, it is likely that there is a misplaced unit of function. You must move one of the pieces of code generating the dependency.
+  * Apply move unit from one container to another in the case an entire unit or units are misplaced.
+  * Apply move function from one unit to another in the case one or more functions are misplaced.</p>
 <figure>
 <p><img alt="CD_4_5" src="https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_cycle_4_5.jpg" />
   </p>
