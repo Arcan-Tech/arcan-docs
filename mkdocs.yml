@@ -59,6 +59,6 @@ nav:
         - 'Analyse a new project': 'analyse_project.md'
         - 'Inspect a project': 'inspect_project.md'
     - 'Knowledge base':
-        - 'Glossary': 'license.md'
+        - 'Glossary': 'glossary.md'
         - 'Architectural smells': 'architectural_smells.md'
         - 'Refactoring best pratices': 'refactoring.md'
