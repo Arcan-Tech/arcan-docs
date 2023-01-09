@@ -50,3 +50,4 @@ theme:
         name: Switch to light mode
 markdown_extensions:
   - md_in_html
+  - pymdownx.superfences
