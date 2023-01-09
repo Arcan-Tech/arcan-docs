@@ -35,10 +35,10 @@ Depending on the characteristics of the dependency to break, different refactori
 ### Refactoring of Cyclic Dependencies affecting CONTAINERS
 
 In the case of Cyclic Dependencies affecting containers (e.g., Java packages), you can face two possibilities:
-* The cycle is caused by a cycle among units. In such a case, you can apply the same techniques for breaking cycles among units.
-* The cycle only exists among packages. In such a case, it is likely that there is a misplaced unit of function. You must move one of the pieces of code generating the dependency.
-  * Apply move unit from one container to another in the case an entire unit or units are misplaced.
-  * Apply move function from one unit to another in the case one or more functions are misplaced.
+- The cycle is caused by a cycle among units. In such a case, you can apply the same techniques for breaking cycles among units.
+- The cycle only exists among packages. In such a case, it is likely that there is a misplaced unit of function. You must move one of the pieces of code generating the dependency.
+  - Apply move unit from one container to another in the case an entire unit or units are misplaced.
+    - Apply move function from one unit to another in the case one or more functions are misplaced.
 
 <figure markdown>
 ![CD_4_5](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_cycle_4_5.jpg)
