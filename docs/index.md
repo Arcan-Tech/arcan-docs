@@ -32,7 +32,7 @@ We offer a platform for automatic source code analysis that assesses the [qualit
 
 A symptom of Architectural Technical Debt is the presence of *Architectural Smells*, design decisions that negatively impact the system internal quality. Arcan main aim is to automatically detect Architectural Smells, indicate where they are located in code and suggest best practices about how to remove them. Refactoring (removing) Architectural Smells is one of the best way to keep the debt under control and avoid the increase of architectural complexity.
 
-Architectural Smells come in different types. [Here](https://github.com/Arcan-Tech/arcan-trial/raw/main/documentation/manual_architectural_smells.pdf) you can find the updated lists of the ones detected by Arcan, along with the description of the best practices to remove them.
+Architectural Smells come in different types. [Here](architectural_smells.md) you can find the updated lists of the ones detected by Arcan and [here](refactoring.md) are the descriptions of the best practices to remove them.
 
 ## Getting started
 
@@ -52,3 +52,8 @@ Arcan is distributed on-premise and in the cloud with yearly licence.
 Pricing depends on the size of the application portfolio to analyse and the number of needed floating licenses.
 
 Contact us at <info@arcan.tech> or leave a message on our [website](https://www.arcan.tech/contact/) to get a quote.
+
+## Support
+
+If you find a bug or want to suggest a new feature create a new issue on Github: [https://github.com/Arcan-Tech/arcan-issues-public](https://github.com/Arcan-Tech/arcan-issues-public).
+If you  need further support or want to know more about Arcan, contact us at <info@arcan.tech> or leave a message on our [website](https://www.arcan.tech/contact/).

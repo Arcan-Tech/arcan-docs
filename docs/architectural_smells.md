@@ -61,7 +61,7 @@ The smell violates the [Modularity Principle](http://www.cs.sjsu.edu/~pearce/mod
 
 ## Unstable Dependency
 
-describes an architectural component that depends on other components that are less stable than itself. Instability (proneness to change) is measured using [R. C. Martin](https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584)’s formula.
+describes an architectural component that depends on other components that are less stable than itself. [Instability](https://codinghelmet.com/articles/how-to-use-module-coupling-and-instability-metrics-to-guide-refactoring) (proneness to change) is measured using [R. C. Martin](https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584)’s formula.
 
 ### Drawbacks
 

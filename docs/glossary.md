@@ -6,11 +6,11 @@
 
 **Analysis**: a single execution of Arcan. An analysis is associated to a specific project’s version.
 
-**Page**: a page of Arcan which contains dashboards or results
+**Page**: a page of Arcan which contains dashboards or results.
 
 **Architectural smell**: an architectural problem affecting a part of code. See slide #4 for more information.
 
-**Plot**: a graphic showing an insight or result
+**Plot**: a graphic showing an insight or result.
 
 **Dependency Graph**: the high-level representation of the project’s architecture. 
-Container and Unit: container=Java Package/ C++ folder; Unit=Java Class/C++ file 
+Container and Unit: container=Java Package/ C++ folder; Unit=Java Class/C++ file. 
