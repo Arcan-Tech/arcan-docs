@@ -51,6 +51,10 @@ theme:
 markdown_extensions:
   - md_in_html
   - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 nav:
     - Welcome: 'index.md'
     - Getting started: 'get_started.md'
