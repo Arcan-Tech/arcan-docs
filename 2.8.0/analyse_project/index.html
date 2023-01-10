@@ -503,23 +503,25 @@
 <li>Type: Select "Local project" for projects residing in the same server where Arcan runs or "Remote" for projects residing in a remote repository (e.g., Github repository).</li>
 </ul>
 <h2 id="analyse-a-remote-repository">Analyse a remote repository</h2>
-<ul>
+<ol>
 <li>Choose type "Remote project" in the "Add new project" page.</li>
 <li>Paste the url pointing to the remote repository. You can only use HTTPS URL like <code>https://github.com/user/repo.git</code></li>
 <li>If the repostiory is private and thus requires authentication, tick the "Project requires authentication" box.</li>
-<li>In the case of analysis of a remote repository requiring authentication, you need to create an access token on your repository provider. How to do that depends on the provider you are using. Here some instructions for the most popular ones:</li>
+<li>In the case of analysis of a remote repository requiring authentication, you need to create an access token on your repository provider. How to do that depends on the provider you are using. Here some instructions for the most popular ones:<ul>
 <li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Github</a></li>
 <li><a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html">Gitlab</a></li>
 <li><a href="https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html">Bitbucket</a></li>
+</ul>
+</li>
 <li>Username: insert here the username you use on the repository provider platform.</li>
 <li>Password: Insert here the access token you generated.</li>
-</ul>
+</ol>
 <h2 id="analyse-a-local-repository">Analyse a local repository</h2>
 <p>In the case of analysis of a local folder, you need to:</p>
-<ul>
+<ol>
 <li>Copy the folder you want to analyse into /arcan-trial/projects folder.</li>
 <li>In the Add New Project form, you must insert <code>./projects/&lt;folder_name&gt;</code></li>
-</ul>
+</ol>
 
 
 
