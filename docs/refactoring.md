@@ -76,7 +76,9 @@ When Arcan detects that a unit is affected by a Hub-Like Dependency, to remove i
 
 1. Identify the centre of the hub, that is the component having a large number of incoming and outgoing dependencies. You can find this information on Arcan.
 2. Work on the centre using the refactoring techniques mentioned above.
-3. Consider the following: a) If you are working on a unit, try identify at least two different roles/responsibilities, then, for each one of them, create a new unit by applying "Extract unit". Additionally, you can also extract common functions/fields into a new superclass using "Extract Superclass". b) If you are working on a funciton, watch the incoming and the outgoing dependencies used and try to create a cohesive set of responsibilities for the function. Split the function into several different functions, each one with a different responsibility.
+3. Consider the following: 
+    - a) If you are working on a unit, try identify at least two different roles/responsibilities, then, for each one of them, create a new unit by applying "Extract unit". Additionally, you can also extract common functions/fields into a new superclass using "Extract Superclass". 
+    - b) If you are working on a funciton, watch the incoming and the outgoing dependencies used and try to create a cohesive set of responsibilities for the function. Split the function into several different functions, each one with a different responsibility.
 
 To remove the hub, you may also need to move the function into a different unit (you may consider creating a new unit, don not force cohesion) and thus the coupling should decrease.
 
