@@ -35,8 +35,11 @@ Depending on the characteristics of the dependency to break, different refactori
 ### Refactoring of Cyclic Dependencies affecting containers
 
 In the case of Cyclic Dependencies affecting containers (e.g., Java packages), you can face two possibilities:
+
 - The cycle is caused by a cycle among units. In such a case, you can apply the same techniques for breaking cycles among units.
-- The cycle only exists among packages. In such a case, it is likely that there is a misplaced unit of function. You must move one of the pieces of code generating the dependency. You can follow two ways: a) Apply move unit from one container to another in the case an entire unit or units are misplaced; b) Apply move function from one unit to another in the case one or more functions are misplaced.
+- The cycle only exists among packages. In such a case, it is likely that there is a misplaced unit of function. You must move one of the pieces of code generating the dependency. You can follow two ways:
+    - Apply move unit from one container to another in the case an entire unit or units are misplaced;
+    - Apply move function from one unit to another in the case one or more functions are misplaced.
 
 <figure markdown>
 ![CD_4_5](https://www.arcan.tech/wp-content/uploads/2023/01/slide_modification_cycle_4_5.jpg)
@@ -77,8 +80,8 @@ When Arcan detects that a unit is affected by a Hub-Like Dependency, to remove i
 1. Identify the centre of the hub, that is the component having a large number of incoming and outgoing dependencies. You can find this information on Arcan.
 2. Work on the centre using the refactoring techniques mentioned above.
 3. Consider the following: 
-    - a) If you are working on a unit, try identify at least two different roles/responsibilities, then, for each one of them, create a new unit by applying "Extract unit". Additionally, you can also extract common functions/fields into a new superclass using "Extract Superclass". 
-    - b) If you are working on a funciton, watch the incoming and the outgoing dependencies used and try to create a cohesive set of responsibilities for the function. Split the function into several different functions, each one with a different responsibility.
+    - If you are working on a unit, try identify at least two different roles/responsibilities, then, for each one of them, create a new unit by applying "Extract unit". Additionally, you can also extract common functions/fields into a new superclass using "Extract Superclass". 
+    - If you are working on a function, watch the incoming and the outgoing dependencies used and try to create a cohesive set of responsibilities for the function. Split the function into several different functions, each one with a different responsibility.
 
 To remove the hub, you may also need to move the function into a different unit (you may consider creating a new unit, don not force cohesion) and thus the coupling should decrease.
 
