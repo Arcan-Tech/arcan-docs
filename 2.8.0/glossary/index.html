@@ -382,6 +382,75 @@
     Glossary
   </a>
   
+    <nav class="md-nav" aria-label="Glossary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
+    Page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-smell" class="md-nav__link">
+    Architectural smell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plot" class="md-nav__link">
+    Plot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-graph" class="md-nav__link">
+    Dependency Graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container" class="md-nav__link">
+    Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit" class="md-nav__link">
+    Unit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -456,6 +525,75 @@
     Glossary
   </a>
   
+    <nav class="md-nav" aria-label="Glossary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
+    Page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-smell" class="md-nav__link">
+    Architectural smell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plot" class="md-nav__link">
+    Plot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-graph" class="md-nav__link">
+    Dependency Graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container" class="md-nav__link">
+    Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit" class="md-nav__link">
+    Unit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -477,14 +615,36 @@
   <h1>Glossary</h1>
 
 <h2 id="glossary">Glossary</h2>
-<p><strong>Project</strong>: the software project that you want to analyse with Arcan. It can be a folder containing source code or a Git repository (local or remote, e.g., hosted on Github).</p>
-<p><strong>Version</strong>: Every time you change something in your project, Arcan tracks a new version. You can run Arcan multiple times on different versions of the same project. Versions can be mapped to commits if you run Arcan on a Git repository.</p>
-<p><strong>Analysis</strong>: a single execution of Arcan. An analysis is associated to a specific project’s version.</p>
-<p><strong>Page</strong>: a page of Arcan which contains dashboards or results.</p>
-<p><strong>Architectural smell</strong>: an architectural problem affecting a part of code. See slide #4 for more information.</p>
-<p><strong>Plot</strong>: a graphic showing an insight or result.</p>
-<p><strong>Dependency Graph</strong>: the high-level representation of the project’s architecture. 
-Container and Unit: container=Java Package/ C++ folder; Unit=Java Class/C++ file. </p>
+<h3 id="project">Project</h3>
+<p>The software project that you want to analyse with Arcan. It can be a folder containing source code or a Git repository (local or remote, e.g., hosted on Github).</p>
+<h3 id="version">Version</h3>
+<p>Every time you change something in your project's source code, Arcan tracks a new version. You can run Arcan multiple times on different versions of the same project. Versions can be mapped to commits if you run Arcan on a Git repository.</p>
+<h3 id="analysis">Analysis</h3>
+<p>A single execution of Arcan. An analysis is associated to a specific project’s version.</p>
+<h3 id="page">Page</h3>
+<p>A page of Arcan which contains dashboards or results.</p>
+<h3 id="architectural-smell">Architectural smell</h3>
+<p>A software architecture problem affecting one or more parts of a codebase. See <a href="../architectural_smells/">here</a> for more information.</p>
+<h3 id="plot">Plot</h3>
+<p>A graphic showing an insight or result.</p>
+<h3 id="dependency-graph">Dependency Graph</h3>
+<p>The high-level representation of the project’s architecture. </p>
+<h3 id="container">Container</h3>
+<p>In Arcan, the architectural components at the highest level of abstraction. Language reference: </p>
+<ul>
+<li>Java: package=container;</li>
+<li>C/C++: folder=container;</li>
+<li>C#: namespace=container;</li>
+<li>Python: python package=container, directory=container.</li>
+</ul>
+<h3 id="unit">Unit</h3>
+<p>In Arcan, the architectural components at the lowest level of abstraction. Language reference: </p>
+<ul>
+<li>Java: class=unit;</li>
+<li>C/C++: file=unit;</li>
+<li>C#: class=unit;</li>
+<li>Python: <a href="https://docs.python.org/3/tutorial/modules.html">python module</a>=unit, file=unit.</li>
+</ul>
 
 
 
