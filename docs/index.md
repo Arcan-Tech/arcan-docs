@@ -1,6 +1,6 @@
 # Welcome to Arcan Documentation
 
-Arcan is an automatic tool for software quality analysis and (Architectural) Technical Debt detection.
+Arcan is an automatic tool for software quality analysis and (Architectural) Technical Debt detection, evaluation and visualisation.
 
 Arcan helps you keep Technical Debt under control and avoid its shortcomings. The tool analyses 5 programming languages
 and integrates into your CI pipeline to ensure that your code continuously meets high-quality standards.
@@ -31,7 +31,8 @@ We offer a platform for automatic source code analysis that assesses the [qualit
 
 ### Architectural Smells
 
-A symptom of Architectural Technical Debt is the presence of *Architectural Smells*, design decisions that negatively impact the system internal quality. Arcan main aim is to automatically detect Architectural Smells, indicate where they are located in code and suggest best practices about how to remove them. Refactoring (removing) Architectural Smells is one of the best way to keep the debt under control and avoid the increase of architectural complexity.
+A symptom of Architectural Technical Debt is the presence of *Architectural Smells*, design decisions that negatively impact the system internal quality. Arcan main aim is to automatically detect Architectural Smells, indicate where they are located in code and suggest best practices about how to remove them. 
+[Refactoring Architectural Smells](refactoring.md) is the activity of removing Architectural Smells from the system by reorganising the code and/or the architecture of the affected artefacts according to a new design. This is a effortful activity, thus it is only adopted as the last resort. Typically, it is preferred to avoid at all the introduction of Technical Debt (e.g. Architectural Smells) by ensuring only clean new code is committed to the codebase.
 
 Architectural Smells come in different types. [Here](architectural_smells.md) you can find the updated lists of the ones detected by Arcan and [here](refactoring.md) are the descriptions of the best practices to remove them.
 
