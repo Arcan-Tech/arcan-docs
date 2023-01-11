@@ -48,7 +48,7 @@ In the case of Cyclic Dependencies affecting containers (e.g., Java packages), y
 
 ## God Component
 
-### Refactoring of Cyclic Dependencies affecting containers
+### Refactoring of God Component affecting containers
 
 The refactoring of God Components affecting containers can be carried out by splitting the content of the container into additional containers. First, you must inspect their dependencies to identify sets of cohesive units to separate. Privilege units that: 
 
@@ -57,7 +57,7 @@ The refactoring of God Components affecting containers can be carried out by spl
 
 Once you identify sets of cohesive units, move them into newly created containers. Mind that you could unintentionally add Cyclic Dependencies among containers while moving.
 
-### Refactoring of Cyclic Dependencies affecting units
+### Refactoring of God Component affecting units
 
 The presence of a God component affecting containers likely implies the presence of a God Component affecting units too.
 In such a case, the main aim when refactoring a God component affecting units is to split it up. To do so, you can apply different techniques:
@@ -85,6 +85,7 @@ When Arcan detects that a unit is affected by a Hub-Like Dependency, to remove i
 
 To remove the hub, you may also need to move the function into a different unit (you may consider creating a new unit, don not force cohesion) and thus the coupling should decrease.
 
+## Unstable Dependency
 
 **Refactoring best practices for Unstable Dependency smell are coming soon.**
 

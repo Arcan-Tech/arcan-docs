@@ -38,7 +38,8 @@ First, [Clone](https://github.com/Arcan-Tech/arcan-trial) or [download](https://
 - To analyse a *remote* project, use the remote repo URL when creating a new project. If the repository is private, remember to use a personal access token as password by ticking the "Project requires authentication" box (see [How to analyse a remote repository](analyse_project.md#analyse-a-remote-repository) for more info).
 - To analyse a *local* project, copy the project folder into `/arcan-trial/projects`. When creating a new project, specify the path to analyse as follows: `./projects/<folder_name>` (see [How to analyse a local repository](analyse_project.md#analyse-a-local-repository) for more info).
 
-#### Optional
+### Optional
 Should you need to update to the latest Arcan version:
+
 - Open the `.env` file. Change the value of the variable `ARCAN_DASHBOARD_VERSION` with the latest Arcan dashboard version tag. You can find the latest version [here](https://github.com/Arcan-Tech/arcan-2/pkgs/container/arcan-dashboard-trial).
 - Change the value of the variable `ARCAN_SERVER_VERSION` with the latest Arcan server version tag. You can find the latest version [here](https://github.com/Arcan-Tech/arcan-2/pkgs/container/arcan-server-trial).
