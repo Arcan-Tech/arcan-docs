@@ -443,15 +443,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#refactoring-of-cyclic-dependencies-affecting-containers_1" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting containers
+  <a href="#refactoring-of-god-component-affecting-containers" class="md-nav__link">
+    Refactoring of God Component affecting containers
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#refactoring-of-cyclic-dependencies-affecting-units_1" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting units
+  <a href="#refactoring-of-god-component-affecting-units" class="md-nav__link">
+    Refactoring of God Component affecting units
   </a>
   
 </li>
@@ -464,6 +464,13 @@
         <li class="md-nav__item">
   <a href="#hub-like-dependency" class="md-nav__link">
     Hub-Like Dependency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unstable-dependency" class="md-nav__link">
+    Unstable Dependency
   </a>
   
 </li>
@@ -545,15 +552,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#refactoring-of-cyclic-dependencies-affecting-containers_1" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting containers
+  <a href="#refactoring-of-god-component-affecting-containers" class="md-nav__link">
+    Refactoring of God Component affecting containers
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#refactoring-of-cyclic-dependencies-affecting-units_1" class="md-nav__link">
-    Refactoring of Cyclic Dependencies affecting units
+  <a href="#refactoring-of-god-component-affecting-units" class="md-nav__link">
+    Refactoring of God Component affecting units
   </a>
   
 </li>
@@ -566,6 +573,13 @@
         <li class="md-nav__item">
   <a href="#hub-like-dependency" class="md-nav__link">
     Hub-Like Dependency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unstable-dependency" class="md-nav__link">
+    Unstable Dependency
   </a>
   
 </li>
@@ -633,14 +647,14 @@
 <figcaption>Figure 4_a: example of container cycle caused by a cycle among units - Figure 4_b: example of container cycle caused by misplaced code</figcaption>
 </figure>
 <h2 id="god-component">God Component</h2>
-<h3 id="refactoring-of-cyclic-dependencies-affecting-containers_1">Refactoring of Cyclic Dependencies affecting containers</h3>
+<h3 id="refactoring-of-god-component-affecting-containers">Refactoring of God Component affecting containers</h3>
 <p>The refactoring of God Components affecting containers can be carried out by splitting the content of the container into additional containers. First, you must inspect their dependencies to identify sets of cohesive units to separate. Privilege units that: </p>
 <ul>
 <li>share dependencies with a high “weight” value. This means they are strongly coupled. You can find the weight metric on Arcan.  </li>
 <li>are involved in Cyclic Dependencies. </li>
 </ul>
 <p>Once you identify sets of cohesive units, move them into newly created containers. Mind that you could unintentionally add Cyclic Dependencies among containers while moving.</p>
-<h3 id="refactoring-of-cyclic-dependencies-affecting-units_1">Refactoring of Cyclic Dependencies affecting units</h3>
+<h3 id="refactoring-of-god-component-affecting-units">Refactoring of God Component affecting units</h3>
 <p>The presence of a God component affecting containers likely implies the presence of a God Component affecting units too.
 In such a case, the main aim when refactoring a God component affecting units is to split it up. To do so, you can apply different techniques:</p>
 <ul>
@@ -666,6 +680,7 @@ In such a case, the main aim when refactoring a God component affecting units is
 </li>
 </ol>
 <p>To remove the hub, you may also need to move the function into a different unit (you may consider creating a new unit, don not force cohesion) and thus the coupling should decrease.</p>
+<h2 id="unstable-dependency">Unstable Dependency</h2>
 <p><strong>Refactoring best practices for Unstable Dependency smell are coming soon.</strong></p>
 
 
