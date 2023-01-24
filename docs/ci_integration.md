@@ -11,14 +11,6 @@ We provide a set of convenience scripts to make this job easier (write us an [em
 
     Notice that this feature is not directly available in the 30-day free trial, you must request it on our [website](https://www.arcan.tech/contact/) or by sending us an [email](mailto:info@arcan.tech).
 
-
-!!! note
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-
-
 ## Instructions
 
 ### Requirements:
