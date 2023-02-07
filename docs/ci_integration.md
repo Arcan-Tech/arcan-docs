@@ -46,7 +46,7 @@ JDBC_PASSWORD=password
 
 Add the following lines to your pipeline
 
-```
+```bash
 ./run-arcan.sh analyse path/to/project $LANGUAGE
 ```
 The script `./run-arcan.sh` is the main file of the repository that automates all the execution of a PoC.

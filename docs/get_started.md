@@ -33,6 +33,10 @@ Click the "ADD NEW " button to analyse a new project.
     - To analyse a *local* project, copy the project folder into `/arcan-trial/projects`. When creating a new project, specify the path to analyse as follows: `./projects/<folder_name>` (see [How to analyse a local repository](analyse_project.md#analyse-a-local-repository) for more info).
 3. In "Configure analysis" click on "ANALYSE" and then "CONTINUE" to trigger the analysis. Once the analysis is completed, you can interact with the project card on the "My projects" page.
 
+## CI Integration
+
+On top of running Arcan from the Dashboard, you can also attach Arcan to a Continuous Integration (CI) pipeline. For instance, you can add Arcan to your Gitlab or Github pipelines. See the [instructions](ci_integration.md) for additional details.
+
 ## Support
 If you find a bug or want to suggest a new feature create a new issue on Github: [https://github.com/Arcan-Tech/arcan-issues-public](https://github.com/Arcan-Tech/arcan-issues-public).
 If you  need further support or want to know more about Arcan, contact us at <info@arcan.tech> or leave a message on our [website](https://www.arcan.tech/contact/).
