@@ -11,17 +11,13 @@
       
       
       
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../installation/">
       
       <link rel="icon" href="../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
-        <title>Getting started - Arcan Documentation</title>
+        <title>Common issues & solutions - Arcan Documentation</title>
       
     
     
@@ -114,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#get-started" class="md-skip">
+        <a href="#common-issues-solutions" class="md-skip">
           Skip to content
         </a>
       
@@ -150,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting started
+              Common issues & solutions
             
           </span>
         </div>
@@ -268,107 +264,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Getting started
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../get_started/" class="md-nav__link">
         Getting started
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#download-and-install-arcan" class="md-nav__link">
-    Download and Install Arcan
-  </a>
-  
-    <nav class="md-nav" aria-label="Download and Install Arcan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-run-arcan-locally" class="md-nav__link">
-    How to run Arcan locally
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-environment" class="md-nav__link">
-    Configure the environment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-arcan" class="md-nav__link">
-    Run Arcan
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-and-analyse-a-new-project" class="md-nav__link">
-    Create and analyse a new project
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ci-integration" class="md-nav__link">
-    CI Integration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    Support
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -580,63 +480,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#download-and-install-arcan" class="md-nav__link">
-    Download and Install Arcan
-  </a>
-  
-    <nav class="md-nav" aria-label="Download and Install Arcan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-run-arcan-locally" class="md-nav__link">
-    How to run Arcan locally
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-environment" class="md-nav__link">
-    Configure the environment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-arcan" class="md-nav__link">
-    Run Arcan
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-and-analyse-a-new-project" class="md-nav__link">
-    Create and analyse a new project
+  <a href="#analysis-never-completes-hangs" class="md-nav__link">
+    Analysis never completes / hangs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ci-integration" class="md-nav__link">
-    CI Integration
+  <a href="#empty-project-no-metrics" class="md-nav__link">
+    Empty project (no metrics)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    Support
+  <a href="#cannot-add-a-project" class="md-nav__link">
+    Cannot add a project
   </a>
   
 </li>
@@ -657,48 +516,39 @@
 
 
 
-<h1 id="get-started">Get Started</h1>
-<h2 id="download-and-install-arcan">Download and Install Arcan</h2>
-<p>This is the quickstart guide to install and run the first analysis with Arcan. See the <a href="../installation/">complete reference</a> for the alternative installation without Docker.</p>
-<h3 id="requirements">Requirements</h3>
+<h1 id="common-issues-solutions">Common issues &amp; solutions</h1>
+<h2 id="analysis-never-completes-hangs">Analysis never completes / hangs</h2>
+<p>If you successfully added the project, started the analysis, but the dashboard keeps showing the spinning circle on your project, then it is likely that your analysis is hanging indefinitely.
+To check whether this is the case, close the dashboard and look at the server's logs (<code>docker logs -f arcan-trial-arcan-server-1</code>).
+Are there any logs that indicate progress? If all you see is <code>Quartz</code>-related logs and memory logs, then it is likely the analysis is stuck.</p>
+<p>This could be caused by any of these:</p>
 <ul>
-<li>Docker Engine &gt;= 20.10 (See <a href="https://docs.docker.com/engine/install">https://docs.docker.com/engine/install</a>)</li>
-<li>Docker Compose (See <a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a>)</li>
+<li>You configured the analysis to analyse too many commits, namely, you set a wide timespan for the analysis (e.g. 10 years) and a low interval between commits (<code>&lt;30</code>). If this is the case, you should restart the server, delete the project, and re-run the analysis with a higher interval between commits (<code>&gt;60</code>). Alternatively, try running a snapshot (non-historical) analysis.</li>
+<li>You are running Arcan on an ARM processor (e.g. M1 Mac).
+Unfortunately, the dockerized version of Arcan does not support ARM processor architecture. The solution is to either run it on a supported processor architecture (i.e. x86/x64) or contact our support (see below).</li>
+<li>Arcan does not have sufficient memory. This is likely if you are trying to analyse a large project (250+ KLOC). You can try setting the environment variable <code>SERVER_JVM_MEMORY</code> to <code>16G</code> in the <code>docker-compose.yml</code> file.</li>
+<li>You are running Docker on a Windows host machine. Unfortunately, Docker on Windows is not as optimized as Windows on <em>nix OSs, therefore, if you are trying to analyse large projects, you should consider using a </em>nix OS.</li>
 </ul>
-<h3 id="how-to-run-arcan-locally">How to run Arcan locally</h3>
-<ol>
-<li><a href="https://github.com/Arcan-Tech/arcan-trial">Clone</a> or <a href="https://github.com/Arcan-Tech/arcan-trial/archive/refs/heads/main.zip">download</a> Arcan from Github. </li>
-<li>Fill in this <a href="https://www.arcan.tech/on-premise-trial/">form</a>. You will receive the license at the provided email address.</li>
-<li>Open the email and download the attached <code>ArcanLicence_YYYYMMDD</code> licence file.</li>
-<li>Copy the <code>ArcanLicence_YYYYMMDD</code> licence file to the <a href="https://github.com/Arcan-Tech/arcan-trial/tree/main/licences">licences</a> directory.</li>
-</ol>
-<h3 id="configure-the-environment">Configure the environment</h3>
-<ol>
-<li>Copy the content of the <a href="https://github.com/Arcan-Tech/arcan-trial/blob/main/.env.example">.env.example</a> file into a new file named <code>.env</code>.</li>
-<li>Change the value of the variable <code>ARCAN_LICENCE_FILENAME</code> with the name of licence file you copied in the <a href="https://github.com/Arcan-Tech/arcan-trial/tree/main/licences">licences</a> directory.</li>
-</ol>
-<h3 id="run-arcan">Run Arcan</h3>
-<ol>
-<li>To run the Arcan dashboard and the server, open your favourite terminal and navigate to the <code>/arcan-trial</code> folder. Within the folder execute: <code>docker compose up</code>.</li>
-<li>You will find the dashboard at <a href="http://localhost:3000">http://localhost:3000</a>.</li>
-</ol>
-<h2 id="create-and-analyse-a-new-project">Create and analyse a new project</h2>
-<p>Open Arcan dashboard at <a href="http://localhost:3000">http://localhost:3000</a>.</p>
-<p>Click the "ADD NEW " button to analyse a new project.</p>
-<ol>
-<li>Fill out the form on the "Add new project" page with the project's name and the programming language you want to analyse.</li>
-<li>Indicate the location of the project you want to analyse:<ul>
-<li>To analyse a <em>remote</em> project, use the remote repo URL when creating a new project. If the repository is private, remember to use a personal access token as password by ticking the "Project requires authentication" box (see <a href="../analyse_project/#analyse-a-remote-repository">How to analyse a remote repository</a> for more info).</li>
-<li>To analyse a <em>local</em> project, copy the project folder into <code>/arcan-trial/projects</code>. When creating a new project, specify the path to analyse as follows: <code>./projects/&lt;folder_name&gt;</code> (see <a href="../analyse_project/#analyse-a-local-repository">How to analyse a local repository</a> for more info).</li>
+<h2 id="empty-project-no-metrics">Empty project (no metrics)</h2>
+<p>If your project has no smells and/or the number of lines of code is 0 (i.e. KLOC), then it's likely that the analysis has not completed successfully. 
+Another symptom is that your project has an <em>unexpected</em> <code>A</code> rating.</p>
+<p>This problem may arise because of the following causes:</p>
+<ul>
+<li>You are analysing a Python project. Python is not yet fully supported and therefore there might be some projects/python features that are not yet fully supported, or handled correctly.</li>
+<li>You are trying to analyse a "Local project" and may have mispelled the path. Delete the project, create a new one, and ensure that the path is correctly spelled as <code>./projects/&lt;FOLDER_NAME&gt;</code>. Note the <code>.</code> at the beginning of the path. If you added the project correctly, you should be able to see the directory tree of the project after the project was created. Alternatively, consider using the "Upload zip" feature (available as of <code>2.8.5-RELEASE</code>).</li>
+<li>You are analysing a large project and the analysis has failed silently. In this case, try following the steps mentioned above in the "Analysis never completes" section.</li>
 </ul>
-</li>
-<li>In "Configure analysis" click on "ANALYSE" and then "CONTINUE" to trigger the analysis. Once the analysis is completed, you can interact with the project card on the "My projects" page.</li>
-</ol>
-<h2 id="ci-integration">CI Integration</h2>
-<p>On top of running Arcan from the Dashboard, you can also attach Arcan to a Continuous Integration (CI) pipeline. For instance, you can add Arcan to your Gitlab or Github pipelines. See the <a href="../ci_integration/">instructions</a> for additional details.</p>
-<h2 id="support">Support</h2>
-<p>If you find a bug or want to suggest a new feature create a new issue on Github: <a href="https://github.com/Arcan-Tech/arcan-issues-public">https://github.com/Arcan-Tech/arcan-issues-public</a>.
-If you  need further support or want to know more about Arcan, contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#97;&#114;&#99;&#97;&#110;&#46;&#116;&#101;&#99;&#104;">&#105;&#110;&#102;&#111;&#64;&#97;&#114;&#99;&#97;&#110;&#46;&#116;&#101;&#99;&#104;</a> or leave a message on our <a href="https://www.arcan.tech/contact/">website</a>.</p>
+<h2 id="cannot-add-a-project">Cannot add a project</h2>
+<p>If you cannot add to Arcan your project, then it might be because:</p>
+<ul>
+<li>You are trying to add a remote project but the URL or credentials are incorrect. If so, Arcan shows an error message that tells you which is the case (wrong credentials or wrong URL). Note that GitHub and GitLab do not support password authentication any longer in favor of Private Access Token (PAT). Please refer to <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub</a>'s and <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html">GitLab</a>'s support pages on how to solve this problem. In both cases, to authenticate, you should paste the PAT in the Arcan's password field.</li>
+<li>You are trying to connect to a non-supported remote (Git incompatible). Arcan only supports the Git version control system, thus, if you want to analyse a non-Git project, you must download it on your local machine and either upload it as a zip, or use the "Local project" feature. Note that <strong>historical analysis is not supported</strong> in this case.</li>
+<li>You get the error <code>Connection refused. Upload size may exceed server's limit.</code>. In this case, it means you have to increase the allowed maximum size of uploads. To do so, change/add to the <code>docker-compose.yml</code> file, the following variable <code>SERVER_MAX_UPLOAD_SIZE: 500MB</code>, or whatever value you fancy.</li>
+</ul>
+<h1 id="cant-solve-a-problem">Can't solve a problem?</h1>
+<p>Should you encounter a different problem, or you cannot solve any of the problems listed above, please consider <a href="https://github.com/Arcan-Tech/arcan-issues-public/issues/new/choose">opening an issue</a>.</p>
+<h1 id="need-more-help">Need more help?</h1>
+<p>Feel free to contact (Darius Sas)[mailto:darius.sas@arcan.tech].</p>
 
 
 
