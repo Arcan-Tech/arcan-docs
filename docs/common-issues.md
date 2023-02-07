@@ -36,7 +36,9 @@ If you cannot add to Arcan your project, then it might be because:
 - You get the error `Connection refused. Upload size may exceed server's limit.`. In this case, it means you have to increase the allowed maximum size of uploads. To do so, change/add to the `docker-compose.yml` file, the following variable `SERVER_MAX_UPLOAD_SIZE: 500MB`, or whatever value you fancy.
 
 # Can't solve a problem?
+
 Should you encounter a different problem, or you cannot solve any of the problems listed above, please consider [opening an issue](https://github.com/Arcan-Tech/arcan-issues-public/issues/new/choose).
 
 # Need more help?
-Feel free to contact (Darius Sas)[mailto:darius.sas@arcan.tech].
+
+Feel free to contact (Darius Sas)[mailto:darius.sas@arcan.tech] or write us on [Discord](https://discord.gg/zDmfa68V).

@@ -55,7 +55,7 @@ Pricing depends on the size of the application portfolio to analyse and the numb
 
 Contact us at <info@arcan.tech> or leave a message on our [website](https://www.arcan.tech/contact/) to get a quote.
 
-## Support
+## Community and Support
 
 If you find a bug or want to suggest a new feature create a new issue on Github: [https://github.com/Arcan-Tech/arcan-issues-public](https://github.com/Arcan-Tech/arcan-issues-public).
-If you  need further support or want to know more about Arcan, contact us at <info@arcan.tech> or leave a message on our [website](https://www.arcan.tech/contact/).
+If you  need further support or want to know more about Arcan, contact us at <info@arcan.tech> or leave a message on our [website](https://www.arcan.tech/contact/) or join us on [Discord](https://discord.gg/zDmfa68V).
