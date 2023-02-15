@@ -697,6 +697,13 @@
 <li>To run the Arcan dashboard and the server, open your favourite terminal and navigate to the <code>/arcan-trial</code> folder. Within the folder execute: <code>docker compose up</code>.</li>
 <li>You will find the dashboard at <a href="http://localhost:3000">http://localhost:3000</a>.</li>
 </ol>
+<blockquote>
+<p>Check the online videos to quickly learn how to use Arcan</p>
+</blockquote>
+<ul>
+<li><a href="https://youtu.be/YLSGT4E_Fbg">Walkthrough video (ENG)</a></li>
+<li><a href="https://youtu.be/MFo9Yocq-q8">Walkthrough video (ITA)</a></li>
+</ul>
 <h2 id="create-and-analyse-a-new-project">Create and analyse a new project</h2>
 <p>Open Arcan dashboard at <a href="http://localhost:3000">http://localhost:3000</a>.</p>
 <p>Click the "ADD NEW " button to analyse a new project.</p>
@@ -709,6 +716,10 @@
 </li>
 <li>In "Configure analysis" click on "ANALYSE" and then "CONTINUE" to trigger the analysis. Once the analysis is completed, you can interact with the project card on the "My projects" page.</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The trial version only supports C# projects compatible with .NET core 6.0.109. UWP, WPF, Windows Forms, EF6, and other Windows-dependant projects may not be analysed correctly (with no warning!) in the trial version.</p>
+</div>
 <h2 id="ci-integration">CI Integration</h2>
 <p>On top of running Arcan from the Dashboard, you can also attach Arcan to a Continuous Integration (CI) pipeline. For instance, you can add Arcan to your Gitlab or Github pipelines. See the <a href="../ci_integration/">instructions</a> for additional details.</p>
 <h2 id="support">Support</h2>
