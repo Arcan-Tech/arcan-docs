@@ -22,6 +22,11 @@ This is the quickstart guide to install and run the first analysis with Arcan. S
 1. To run the Arcan dashboard and the server, open your favourite terminal and navigate to the `/arcan-trial` folder. Within the folder execute: `docker compose up`.
 2. You will find the dashboard at [http://localhost:3000](http://localhost:3000).
 
+> Check the online videos to quickly learn how to use Arcan
+
+* [Walkthrough video (ENG)](https://youtu.be/YLSGT4E_Fbg)
+* [Walkthrough video (ITA)](https://youtu.be/MFo9Yocq-q8)
+
 ## Create and analyse a new project
 Open Arcan dashboard at [http://localhost:3000](http://localhost:3000).
 

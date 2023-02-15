@@ -47,6 +47,8 @@ You will need [docker](https://docs.docker.com/get-docker/) installed on your ma
 * [Quickstart](get_started.md)
 * [Arcan glossary](glossary.md)
 * [Guide to results inspection](inspect_project.md)
+* [Walkthrough video (ENG)](https://youtu.be/YLSGT4E_Fbg)
+* [Walkthrough video (ITA)](https://youtu.be/MFo9Yocq-q8)
 
 ## Get a yearly license
 
