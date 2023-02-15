@@ -38,7 +38,9 @@ Click the "ADD NEW " button to analyse a new project.
     - To analyse a *local* project, copy the project folder into `/arcan-trial/projects`. When creating a new project, specify the path to analyse as follows: `./projects/<folder_name>` (see [How to analyse a local repository](analyse_project.md#analyse-a-local-repository) for more info).
 3. In "Configure analysis" click on "ANALYSE" and then "CONTINUE" to trigger the analysis. Once the analysis is completed, you can interact with the project card on the "My projects" page.
 
-**NOTE**: The trial version only supports C# projects compatible with .NET core 6.0.109. UWP, WPF, Windows Forms, EF6, and other Windows-dependant projects may not be analysed correctly (with no warning!) in the trial version.
+!!! note
+
+    The trial version only supports C# projects compatible with .NET core 6.0.109. UWP, WPF, Windows Forms, EF6, and other Windows-dependant projects may not be analysed correctly (with no warning!) in the trial version.
 
 ## CI Integration
 
