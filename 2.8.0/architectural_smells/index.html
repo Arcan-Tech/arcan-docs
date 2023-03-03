@@ -465,6 +465,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#detection-strategy" class="md-nav__link">
+    Detection strategy
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -481,6 +488,13 @@
           <li class="md-nav__item">
   <a href="#drawbacks_1" class="md-nav__link">
     Drawbacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-strategy_1" class="md-nav__link">
+    Detection strategy
   </a>
   
 </li>
@@ -505,6 +519,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#detection-strategy_2" class="md-nav__link">
+    Detection strategy
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -521,6 +542,13 @@
           <li class="md-nav__item">
   <a href="#drawbacks_3" class="md-nav__link">
     Drawbacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-strategy_3" class="md-nav__link">
+    Detection strategy
   </a>
   
 </li>
@@ -629,6 +657,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#detection-strategy" class="md-nav__link">
+    Detection strategy
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -645,6 +680,13 @@
           <li class="md-nav__item">
   <a href="#drawbacks_1" class="md-nav__link">
     Drawbacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-strategy_1" class="md-nav__link">
+    Detection strategy
   </a>
   
 </li>
@@ -669,6 +711,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#detection-strategy_2" class="md-nav__link">
+    Detection strategy
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -685,6 +734,13 @@
           <li class="md-nav__item">
   <a href="#drawbacks_3" class="md-nav__link">
     Drawbacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-strategy_3" class="md-nav__link">
+    Detection strategy
   </a>
   
 </li>
@@ -714,10 +770,10 @@
 <p>Arcan bases the estimate of Technical Debt on the detection of Architectural Smells, software design decisions that negatively impact the software quality. Smells violates design principles.</p>
 <p>At the moment, Arcan detects four types of Architectural Smells:</p>
 <ul>
-<li>Cyclic Dependency</li>
-<li>God Component</li>
-<li>Hub-Like Dependency</li>
-<li>Unstable Dependency</li>
+<li><a href="./#cyclic-dependency">Cyclic Dependency</a></li>
+<li><a href="./#god-component">God Component</a></li>
+<li><a href="./#hub-like-dependency">Hub-Like Dependency</a></li>
+<li><a href="./#unstable-dependency">Unstable Dependency</a></li>
 </ul>
 <h2 id="cyclic-dependency">Cyclic Dependency</h2>
 <p>When two or more architectural components are involved in a chain of relationships. </p>
@@ -729,9 +785,15 @@
 <li>hard to reuse in isolation</li>
 </ul>
 <p>The smell violates the <a href="https://devlead.io/DevTips/AcyclicDependenciesPrinciple">Acyclic Dependencies Principle</a> defined by <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>.</p>
+<h3 id="detection-strategy">Detection strategy</h3>
+<p>The detection of Cyclic Dependency (CD) in Arcan is done using the <a href="../glossary/#dependency-graph">dependency graph</a> of the system that we are analysing, i.e., the graph representation of the system's architectural components and dependencies.</p>
+<p>CD is detected on both <a href="../glossary/#unit">units</a> and <a href="../glossary/#container">containers</a> (e.g., classes and packages in Java). A cycle is detected whenever two or more architectural components depend upon each other in a cycle. Arcan detects CD on different types of components and uses well-known cycle detection algorithm to identify components that belong to the same cycles. The algorithms supported by Arcan are
+- <strong>Sedgewick-Wayne</strong> algorithm, a simple DFS-based algorithm to detect cycles. More information <a href="https://sedgewick.io/books/algorithms/">here</a>. This is the default implementation used by Arcan. 
+- <strong>Tarjan's strongly connected components</strong> (SCC) algorithm. You can find more <a href="https://epubs.siam.org/doi/10.1137/0201010">here</a>
+- <strong>Laval-Falleri's shortest cycles</strong> algorithm. You can find more <a href="https://link.springer.com/chapter/10.1007/978-3-642-21952-8_19">here</a>. This is the default implementation used by Arcan for Layered Cyclic Dependencies.</p>
 <p><img alt="CD" src="https://www.arcan.tech/wp-content/uploads/2023/01/cycle_1.jpg" /></p>
 <h2 id="god-component">God Component</h2>
-<p>this smell occurs when an architectural component is excessively large in terms of LOC (Lines Of Code). </p>
+<p>This smell occurs when an architectural component is excessively large in terms of LOC (Lines Of Code). </p>
 <h3 id="drawbacks_1">Drawbacks</h3>
 <p>The architectural component affected by God Component:</p>
 <ul>
@@ -740,9 +802,15 @@
 <li>has increasing complexity</li>
 </ul>
 <p>The smell violates the <a href="http://www.cs.sjsu.edu/~pearce/modules/lectures/ood/principles/Modularity.htm">Modularity Principle</a> defined by <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>.</p>
+<h3 id="detection-strategy_1">Detection strategy</h3>
+<p>The detection of the God component (GC) smell is done using the size, in terms of number of lines of code, of the system analysed.</p>
+<p>GC is detected at the container-level (e.g., packages in Java). The smell detection is based on Lippert and Rook's definition of GC, which is based on the total number of lines of code contained in the package.
+While Lippert and Rook suggest to use a fixed threshold of 27.000 lines of code to detect the smell, our approach is more sophisticated and data-driven.
+We calculate the detection threshold dynamically. The threshold is calculated as <code>LinesOfCode = Max(LinesOfCode_System, LinesOfCode_Benchmark)</code> where each individual <code>LinesOfCode_*</code> is calculated using frequency analysis of the metric <code>LinesOfCode</code> computed on the system and the benchmark separately. The metric is calculated as the total number of lines of code of all the elemnts belonging to a specific component.
+The specific approach used to calculate the threshold is detailed <a href="https://ieeexplore.ieee.org/abstract/document/7181590/?casa_token=Hiyr0DFJbBkAAAAA:-Q6s9b_--cb1ALK6AEblsofWUjr82E6cTRV7oIFiwd9cIJRG65XN2d5gE-3B-n1M8zxX1pPU">here</a>.</p>
 <p><img alt="GC" src="https://www.arcan.tech/wp-content/uploads/2023/01/god.jpg" /></p>
 <h2 id="hub-like-dependency">Hub-Like Dependency</h2>
-<p>When an architectural component has (outgoing and ingoing) dependencies with a large number of other components. The component affected by HL ,  and . </p>
+<p>When an architectural component has (outgoing and ingoing) dependencies with a large number of other components. </p>
 <h3 id="drawbacks_2">Drawbacks</h3>
 <p>The component affected by the smell:</p>
 <ul>
@@ -751,9 +819,15 @@
 <li>favors change ripple effects</li>
 </ul>
 <p>The smell violates the <a href="http://www.cs.sjsu.edu/~pearce/modules/lectures/ood/principles/Modularity.htm">Modularity Principle</a> defined by <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>.</p>
+<h3 id="detection-strategy_2">Detection strategy</h3>
+<p>The detection of Hublike Dependency (HL) in Arcan is done starting from the <a href="../glossary/#dependency-graph">dependency graph</a> of the system under analysis.</p>
+<p>HL, or simply "hub", is detected on both units and containers (e.g., classes and packages in Java). A hub is detected whenever a component in the system has "too many" incoming and outgoing dependencies (FanIn and FanOut, respectively). The "too many" is calculated using a dynamic threshold that is based on both a benchmark of 100+ systems (from the <a href="http://qualitascorpus.com/">Qualitas Corpus</a>) and the system under analysis.
+This allows us to not pick the the threshold arbitrarily, but instead use a <strong>data-driven</strong> approach.</p>
+<p>In particular, the threshold is calculated as <code>Threshold = Max(Threshold_System, Threshold_Benchmark)</code> where each individual <code>Threshold_*</code> is calculated using frequency analysis of the metric <code>TotalDeps</code> computed on the system and the benchmark separately, where <code>TotalDeps(x) = FanIn(x) + FanOut(x)</code> for all components <code>x</code>.
+The specific approach used to calculate the threshold is detailed <a href="https://ieeexplore.ieee.org/abstract/document/7181590/?casa_token=Hiyr0DFJbBkAAAAA:-Q6s9b_--cb1ALK6AEblsofWUjr82E6cTRV7oIFiwd9cIJRG65XN2d5gE-3B-n1M8zxX1pPU">here</a>.</p>
 <p><img alt="HL" src="https://www.arcan.tech/wp-content/uploads/2023/01/hub.jpg" /></p>
 <h2 id="unstable-dependency">Unstable Dependency</h2>
-<p>describes an architectural component that depends on other components that are less stable than itself. <a href="https://codinghelmet.com/articles/how-to-use-module-coupling-and-instability-metrics-to-guide-refactoring">Instability</a> (proneness to change) is measured using <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>’s formula.</p>
+<p>Describes an architectural component that depends on other components that are less stable than itself. <a href="https://codinghelmet.com/articles/how-to-use-module-coupling-and-instability-metrics-to-guide-refactoring">Instability</a> (proneness to change) is measured using <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>’s formula.</p>
 <h3 id="drawbacks_3">Drawbacks</h3>
 <p>The component affected by the smell can:</p>
 <ul>
@@ -761,6 +835,11 @@
 <li>be subjected to frequent changes</li>
 </ul>
 <p>The smell violates the <a href="https://devlead.io/DevTips/StableDependenciesPrinciple">Stable Dependency Principle</a> defined by <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>.</p>
+<h3 id="detection-strategy_3">Detection strategy</h3>
+<p>The detection of Unstable dependency (UD) is done using the <a href="../glossary/#dependency-graph">dependency graph</a> of the system under analysis.</p>
+<p>UD is detected at the container-level (e.g., packages in Java) only, whenever a container depends on other containers that are less stable than itself.
+By <em>Instability</em> we mean R.C. Martin's Instability metric, whose definition can be found <a href="https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/">here</a>. Instability calculates how easy it is for a container to change because of other containers (e.g. packages) in the system have changed. Namely, it is a measure of the risk of ripple change effects.</p>
+<p>The detection rule is the following: <code>Intability(x) &gt; Instability(y) + delta</code> for all containers <code>y</code> such that <code>x</code> depends upon, and  <code>x</code> is the container (e.g., package) that we are checking for the presence of UD.</p>
 <p><img alt="UD" src="https://www.arcan.tech/wp-content/uploads/2023/01/unstable.jpg" /></p>
 
 
