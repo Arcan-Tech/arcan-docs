@@ -19,7 +19,7 @@ A software architecture problem affecting one or more parts of a codebase. See [
 A graphic showing an insight or result.
 
 ### Dependency Graph
-The high-level representation of the project’s architecture. 
+The high-level representation of the project’s architecture. The graph nodes represent architectural components and the graph edges represent the dependencies among them.
 
 ### Container
 In Arcan, the architectural components at the highest level of abstraction. Language reference: 
