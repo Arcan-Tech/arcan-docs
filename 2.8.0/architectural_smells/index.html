@@ -787,10 +787,12 @@
 <p>The smell violates the <a href="https://devlead.io/DevTips/AcyclicDependenciesPrinciple">Acyclic Dependencies Principle</a> defined by <a href="https://www.amazon.it/Software-Development-Principles-Patterns-Practices/dp/0132760584">R. C. Martin</a>.</p>
 <h3 id="detection-strategy">Detection strategy</h3>
 <p>The detection of Cyclic Dependency (CD) in Arcan is done using the <a href="../glossary/#dependency-graph">dependency graph</a> of the system that we are analysing, i.e., the graph representation of the system's architectural components and dependencies.</p>
-<p>CD is detected on both <a href="../glossary/#unit">units</a> and <a href="../glossary/#container">containers</a> (e.g., classes and packages in Java). A cycle is detected whenever two or more architectural components depend upon each other in a cycle. Arcan detects CD on different types of components and uses well-known cycle detection algorithm to identify components that belong to the same cycles. The algorithms supported by Arcan are
-- <strong>Sedgewick-Wayne</strong> algorithm, a simple DFS-based algorithm to detect cycles. More information <a href="https://sedgewick.io/books/algorithms/">here</a>. This is the default implementation used by Arcan. 
-- <strong>Tarjan's strongly connected components</strong> (SCC) algorithm. You can find more <a href="https://epubs.siam.org/doi/10.1137/0201010">here</a>
-- <strong>Laval-Falleri's shortest cycles</strong> algorithm. You can find more <a href="https://link.springer.com/chapter/10.1007/978-3-642-21952-8_19">here</a>. This is the default implementation used by Arcan for Layered Cyclic Dependencies.</p>
+<p>CD is detected on both <a href="../glossary/#unit">units</a> and <a href="../glossary/#container">containers</a> (e.g., classes and packages in Java). A cycle is detected whenever two or more architectural components depend upon each other in a cycle. Arcan detects CD on different types of components and uses well-known cycle detection algorithm to identify components that belong to the same cycles. The algorithms supported by Arcan are:</p>
+<ul>
+<li><strong>Sedgewick-Wayne</strong> algorithm, a simple DFS-based algorithm to detect cycles. More information <a href="https://sedgewick.io/books/algorithms/">here</a>. This is the default implementation used by Arcan. </li>
+<li><strong>Tarjan's strongly connected components</strong> (SCC) algorithm. You can find more <a href="https://epubs.siam.org/doi/10.1137/0201010">here</a></li>
+<li><strong>Laval-Falleri's shortest cycles</strong> algorithm. You can find more <a href="https://link.springer.com/chapter/10.1007/978-3-642-21952-8_19">here</a>. This is the default implementation used by Arcan for Layered Cyclic Dependencies.</li>
+</ul>
 <p><img alt="CD" src="https://www.arcan.tech/wp-content/uploads/2023/01/cycle_1.jpg" /></p>
 <h2 id="god-component">God Component</h2>
 <p>This smell occurs when an architectural component is excessively large in terms of LOC (Lines Of Code). </p>
