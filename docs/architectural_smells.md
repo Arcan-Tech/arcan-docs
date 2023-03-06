@@ -26,7 +26,8 @@ The smell violates the [Acyclic Dependencies Principle](https://devlead.io/DevTi
 
 The detection of Cyclic Dependency (CD) in Arcan is done using the [dependency graph](glossary.md#dependency-graph) of the system that we are analysing, i.e., the graph representation of the system's architectural components and dependencies.
 
-CD is detected on both [units](glossary.md#unit) and [containers](glossary.md#container) (e.g., classes and packages in Java). A cycle is detected whenever two or more architectural components depend upon each other in a cycle. Arcan detects CD on different types of components and uses well-known cycle detection algorithm to identify components that belong to the same cycles. The algorithms supported by Arcan are
+CD is detected on both [units](glossary.md#unit) and [containers](glossary.md#container) (e.g., classes and packages in Java). A cycle is detected whenever two or more architectural components depend upon each other in a cycle. Arcan detects CD on different types of components and uses well-known cycle detection algorithm to identify components that belong to the same cycles. The algorithms supported by Arcan are:
+
 - **Sedgewick-Wayne** algorithm, a simple DFS-based algorithm to detect cycles. More information [here](https://sedgewick.io/books/algorithms/). This is the default implementation used by Arcan. 
 - **Tarjan's strongly connected components** (SCC) algorithm. You can find more [here](https://epubs.siam.org/doi/10.1137/0201010)
 - **Laval-Falleri's shortest cycles** algorithm. You can find more [here](https://link.springer.com/chapter/10.1007/978-3-642-21952-8_19). This is the default implementation used by Arcan for Layered Cyclic Dependencies.
