@@ -47,5 +47,5 @@ Click the "ADD NEW " button to analyse a new project.
 On top of running Arcan from the Dashboard, you can also attach Arcan to a Continuous Integration (CI) pipeline. For instance, you can add Arcan to your Gitlab or Github pipelines. See the [instructions](ci_integration.md) for additional details.
 
 ## Support
-If you find a bug or want to suggest a new feature create a new issue on Github: [https://github.com/Arcan-Tech/arcan-issues-public](https://github.com/Arcan-Tech/arcan-issues-public).
-If you  need further support or want to know more about Arcan, contact us at <info@arcan.tech> or leave a message on our [website](https://www.arcan.tech/contact/).
+
+Need help or more information? There are many ways to contact us, choose your favorite [here](support.md).

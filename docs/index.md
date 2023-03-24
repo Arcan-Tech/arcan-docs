@@ -13,7 +13,7 @@ The analysis is available for the following programming languages:
 * C#
 * Python
 
-More languages are coming next!
+More languages are coming next! Learn more on language version compatibility [here](compatibility.md).
 
 ## Architectural Technical Debt
 
@@ -59,5 +59,4 @@ Contact us at <info@arcan.tech> or leave a message on our [website](https://www.
 
 ## Community and Support
 
-If you find a bug or want to suggest a new feature create a new issue on Github: [https://github.com/Arcan-Tech/arcan-issues-public](https://github.com/Arcan-Tech/arcan-issues-public).
-If you  need further support or want to know more about Arcan, contact us at <info@arcan.tech> or leave a message on our [website](https://www.arcan.tech/contact/) or join us on [Discord](https://discord.gg/zDmfa68V).
+Need help or more information? There are many ways to contact us, choose your favorite [here](support.md).

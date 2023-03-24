@@ -86,4 +86,6 @@ nav:
         - 'Architectural smells': 'architectural_smells.md'
         - 'Results interpretation': 'interpretation.md'
         - 'Refactoring best pratices': 'refactoring.md'
+    - 'Supported languages': 'compatibility.md'
     - 'Common issues': 'common-issues.md'
+    - 'Support': 'support.md'
