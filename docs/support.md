@@ -10,6 +10,6 @@ Are you having problems installing or using Arcan? Reach out, we are here to hel
 
 ## Contacts
 
-* [Website](https:\\www.arcan.tech)
+* [Website](https://www.arcan.tech)
 * <info@arcan.tech>: for any request of information.
 * <sales@arcan.tech>: to open a conversation with our sales team.
