@@ -34,6 +34,7 @@ If you cannot add to Arcan your project, then it might be because:
 - You are trying to add a remote project but the URL or credentials are incorrect. If so, Arcan shows an error message that tells you which is the case (wrong credentials or wrong URL). Note that GitHub and GitLab do not support password authentication any longer in favor of Private Access Token (PAT). Please refer to [GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)'s and [GitLab](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)'s support pages on how to solve this problem. In both cases, to authenticate, you should paste the PAT in the Arcan's password field.
 - You are trying to connect to a non-supported remote (Git incompatible). Arcan only supports the Git version control system, thus, if you want to analyse a non-Git project, you must download it on your local machine and either upload it as a zip, or use the "Local project" feature. Note that **historical analysis is not supported** in this case.
 - You get the error `Connection refused. Upload size may exceed server's limit.`. In this case, it means you have to increase the allowed maximum size of uploads. To do so, change/add to the `docker-compose.yml` file, the following variable `SERVER_MAX_UPLOAD_SIZE: 500MB`, or whatever value you fancy.
+- When adding a new project, the dropdown menu to select the programming language is empty. This is always caused by the fact that the dashboard cannot communicate with the server. Usually, this happens because you have installed Arcan on a remote machine (e.g., a virtual machine on a shared server) and use the dashboard from your local machine. By default, Arcan dashboard tries to reach the server at `localhost:8080` but the server is not running on your machine. To fix the problem, open `docker-compose.yml` and modify `REACT_APP_GRAPHQL_SERVER_URL` and `REACT_APP_PUBLIC_URL`  by replacing localhost with the IP address of your machine.
 
 # Can't solve a problem?
 
@@ -41,4 +42,4 @@ Should you encounter a different problem, or you cannot solve any of the problem
 
 # Need more help?
 
-Feel free to contact (Darius Sas)[mailto:darius.sas@arcan.tech] or write us on [Discord](https://discord.gg/zDmfa68V).
+Feel free to contact our support team at <support@arcan.tech> or write us on [Discord](https://discord.gg/Nfk7juy3qd).
