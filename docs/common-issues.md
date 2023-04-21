@@ -36,6 +36,11 @@ If you cannot add to Arcan your project, then it might be because:
 - You get the error `Connection refused. Upload size may exceed server's limit.`. In this case, it means you have to increase the allowed maximum size of uploads. To do so, change/add to the `docker-compose.yml` file, the following variable `SERVER_MAX_UPLOAD_SIZE: 500MB`, or whatever value you fancy.
 - When adding a new project, the dropdown menu to select the programming language is empty. This is always caused by the fact that the dashboard cannot communicate with the server. Usually, this happens because you have installed Arcan on a remote machine (e.g., a virtual machine on a shared server) and use the dashboard from your local machine. By default, Arcan dashboard tries to reach the server at `localhost:8080` but the server is not running on your machine. To fix the problem, open `docker-compose.yml` and modify `REACT_APP_GRAPHQL_SERVER_URL` and `REACT_APP_PUBLIC_URL`  by replacing localhost with the IP address of your machine.
 
+## Some information is missing from the Dependency Graph
+
+If the reverse engineering of dependencies looks incomplete and you think the analysis does not return the expected results, it might be due to the programming language under analysis. Check our compatibility page to verify Arcan's supported languages and consult our tips for specific language frameworks (e.g., Spring).
+
+
 # Can't solve a problem?
 
 Should you encounter a different problem, or you cannot solve any of the problems listed above, please consider [opening an issue](https://github.com/Arcan-Tech/arcan-issues-public/issues/new/choose).

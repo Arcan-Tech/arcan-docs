@@ -13,3 +13,7 @@ The table below shows the programming languages and the versions supported by Ar
 !!! warning
 
     \* Arcan (trial and cloud) is distributed as a Docker container based on Linux. This severely limits the supported .NET projects. You could still analyse these projects but it is likely that the results are incomplete.
+
+!!! tip
+
+    To analyze Spring projects that instantiate beans dynamically and make heavy use of class hierarchies, Arcan needs to know what classes these beans are instances of. Typically, this information is contained within a `beans.xml` file(s), under the `**/resources` directory. Therefore, ensure that you both check the `Is this a Spring project?` checkbox and that the resources directory is selected when selecting the directories to be analysed.
