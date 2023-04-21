@@ -38,7 +38,7 @@ If you cannot add to Arcan your project, then it might be because:
 
 ## Some information is missing from the Dependency Graph
 
-If the reverse engineering of dependencies looks incomplete and you think the analysis does not return the expected results, it might be due to the programming language under analysis. Check our compatibility page to verify Arcan's supported languages and consult our tips for specific language frameworks (e.g., Spring).
+If the reverse engineering of [dependencies](glossary.md#dependency-graph) looks incomplete and you think the analysis does not return the expected results, it might be due to the programming language under analysis. Check our [compatibility](compatibility.md) page to verify Arcan's supported languages and consult our tips for specific language frameworks (e.g., Spring).
 
 
 # Can't solve a problem?
