@@ -2,12 +2,15 @@
 
 Arcan bases the estimate of Technical Debt on the detection of Architectural Smells, software design decisions that negatively impact the software quality. Smells violates design principles.
 
-At the moment, Arcan detects four types of Architectural Smells:
+At the moment, Arcan detects seven types of Architectural Smells:
 
 - [Cyclic Dependency](architectural_smells.md#cyclic-dependency)
 - [God Component](architectural_smells.md#god-component)
 - [Hub-Like Dependency](architectural_smells.md#hub-like-dependency)
 - [Unstable Dependency](architectural_smells.md#unstable-dependency)
+- [Cyclic Hierarchy](architectural_smells.md#cyclic-hierarchy)
+- [Deep Hierarchy](architectural_smells.md#deep-hierarchy)
+- [Wide Hierarchy](architectural_smells.md#wide-hierarchy)
 
 ## Cyclic Dependency
 
@@ -113,3 +116,49 @@ The detection rule is the following: `Intability(x) > Instability(y) + delta` fo
 
 
 ![UD](https://www.arcan.tech/wp-content/uploads/2023/01/unstable.jpg)
+
+## Cyclic Hierarchy
+
+This smell arises when a supertype in a hierarchy depends on any of its subtypes. 
+
+
+### Drawbacks
+
+The main problem with the supertype having knowledge of one of its subtypes is that changes to subtypes can potentially affect the supertype.
+
+Modifications to or removal of subtypes may potentially affect supertypes, which may in turn affect other subtypes in the hierarchy. Such ripple effects often manifest as runtime problems. These factors affect the changeability, extensibility, and reliability of the hierarchy.
+
+In this presence of this smell, a supertype cannot be used independent of its subtype. This impacts the reusability of the supertypes.
+
+The supertype cannot be tested independently of the subtype(s) it depends on, impacting its testability.
+
+## Deep Hierarchy
+
+This smell arises when an inheritance hierarchy is excessively deep.
+
+A hierarchy that is excessively deep significantly increases the difficulty in predicting the behavior of code in a leaf type since the type inherits a relatively large number of methods from its supertypes.
+
+### Drawbacks
+
+As the hierarchy becomes deep, it significantly increases the difficultly in predicting the behavior of a leaf class since the  class inherits a large number of methods. Further, it makes the design more complex. These factors impact the understandability of the design.
+
+When a hierarchy is deep, it is difficult to figure out what types to modify within the hierarchy to implement change or enhancement requests. Further, when any modification is done in types closer to the root of the hierarchy, it is difficult to determine the ripple effects of the change on its descendant types since the hierarchy is deep. This impacts the changeability and extensibility of the design.
+
+It may require more effort to test unnecessary intermediate types in a hierarchy that is deep (when compared to testing a hierarchy without those intermediate types). Further, because some methods in the hierarchy that is deep could have been overridden multiple times, it is harder to test the overridden methods in the hierarchy. These factors impact the testability of the hierarchy.
+
+A method from a supertype close to the root of the hierarchy may be overridden many times in the hierarchy. Hence, in the leaf types, the semantics of the inherited method may not be clear. In a similar vein, a field defined in a supertype may be hidden (or shadowed) in one of the methods in the subtypes. Confusion that ensues from overriding or hiding often leads to runtime problems, impacting the reliability of the design.
+
+## Wide Hierarchy
+
+This smell arises when an inheritance hierarchy is too wide indicating that intermediate types may be missing.
+
+### Drawbacks
+
+When intermediate abstractions are missing, the sibling classes are not at the same level of abstraction and the programmer
+has to do a “logical leap” to move from higher levels of abstraction to much lower levels of abstraction. This impacts the understandability of the hierarchy.
+
+When hierarchies lack intermediate abstractions, the clients are forced to depend directly on lower-level abstractions. Since lower-level abstractions are more susceptible to change, there is a higher possibility that the client code may also get impacted. Hence, in the presence of this smell, changeability of the hierarchy is impacted.
+
+One of the advantages of a properly designed hierarchy is that the types serve as “hook points” or “placeholders” for future extensions. Since some intermediate types are missing in the hierarchy, it affects the extensibility of the hierarchy.
+
+An advantage of a properly designed hierarchy is that the types serve as interfaces to client code. Since some intermediate abstractions are missing in a Wide Hierarchy, it reduces the reusability of the hierarchy.
